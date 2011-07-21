@@ -1,25 +1,38 @@
 #! /usr/local/bin/ruby
 
-include 'classes/page.rb'
-include 'classes/node.rb'
-include 'classes/menuLink.rb'
-include 'classes/fieldDataBody.rb'
-include 'classes/urlAlias.rb'
+require 'rubygems'
+require 'nokogiri'
+require 'class/page.rb'
+require 'class/node.rb'
+require 'class/menuLink.rb'
+require 'class/fieldDataBody.rb'
+require 'class/urlAlias.rb'
+require 'class/nodeAccess.rb'
+require 'util/scrape.rb'
 
 # Method for downloading website
-# wget --recursive --no-clobber --html-extension --domains $website $website
+webExpressUrl = 'crimelab.uchicago.edu'
+wgetDir = 'tmp/'
+`wget --quiet --recursive --no-clobber --domains #{webExpressUrl} #{webExpressUrl} -P #{wgetDir} -l 2`
 
-# There are already entries in the Drupal database, so we need to set the correct id offset
-def getLastNodeId() { return 50 }
-def getLastMenuLinkId() { return 500 }
+# Assumes BSD version of `find'
+sitePath = './' + wgetDir + webExpressUrl + '/'
+found = `find ./tmp/crimelab.uchicago.edu -name index.html`
+found.each_line do |file|
+	file.strip!
+	path = file.sub(sitePath, '')
+	if path == 'index.html'
+		doc = Nokogiri::HTML.parse(File.read(file))
+		doc.css('ul.sectionname li a').each do |a|
+			puts a.content
+		end
+	end
+	puts scrape(doc)
+end
 
 
-
-
-
-# "INSERT INTO `node_access` VALUES ('" + @id.to_s + "', '0', 'all', '1', '0', '0');"
-# url_alias
-
+	#doc = Nokogiri::HTML.parse(File.read(found))
+	#doc.css('ul.sectionhead li a').each do |parentLink|
 # Algorithm
 #    go to index
 #    for each `li` in `ul.menu`
@@ -34,8 +47,7 @@ def getLastMenuLinkId() { return 500 }
 #                    create link    
 #
 
-mL = MenuLink.new(474, 0, 'Sample Content', 22, true, -48, 1);
-sL = MenuLink.new(475, 474, 'Basic Page', 23, false, -50, 2);
-
-puts mL.to_s
-puts sL.to_s
+# mL = MenuLink.new(474, 0, 'Sample Content', 22, true, -48, 1);
+# sL = MenuLink.new(475, 474, 'Basic Page', 23, false, -50, 2);
+# puts mL.to_s
+# puts sL.to_s

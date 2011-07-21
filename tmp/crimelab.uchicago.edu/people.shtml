@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- com.omniupdate.properties -->
+<title>People | The University of Chicago</title>
+<!-- /com.omniupdate.properties -->
+<meta name="revised" content="Friday, 20-May-2011 15:46:05 CDT" />
+<!-- com.omniupdate.div label="head" path="/ssi/template/head.shtml" -->
+<link rel="stylesheet" href="http://www.uchicago.edu/c/template_sites/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/c/sitespecific.css" type="text/css" media="screen, projection" />
+<!--[if IE 6]>
+<link rel="stylesheet" href="http://www.uchicago.edu/c/template_sites/ie6.css" type="text/css" media="screen, projection" />
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="http://www.uchicago.edu/c/template_sites/ie7.css" type="text/css" media="screen, projection" />
+<![endif]-->
+<link rel="stylesheet" href="http://www.uchicago.edu/c/template_sites/print.css" type="text/css" media="print" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="en-us" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="copyright" content="Copyright (c) 2011 The University of Chicago, All Rights Reserved." />
+<link rel="home" href="/" title="Home" />
+<script type="text/javascript" src="http://www.uchicago.edu/js/ouhook.js"></script>
+
+<!-- /com.omniupdate.div -->
+<!-- com.omniupdate.properties -->
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<!-- /com.omniupdate.properties -->
+</head>
+<body class="lo5 two" id="people">
+
+<div id="container">
+<!--masthead begins here -->
+<!-- com.omniupdate.div label="masthead" path="/ssi/template/masthead.shtml" -->
+<div id="wordmarkprint"><img src="http://www.uchicago.edu/i/template/uc_wordmark_hires.gif" alt="The University of Chicago" height="1" width="1" /></div>
+<div id="masthead">
+<h1><a href="http://www.uchicago.edu/" title="University of Chicago Home" id="wordmark">The University of Chicago</a>
+<a href="/" title="Home" id="dept_title">Leo Strauss Center</a></h1>
+<p>Skip to: <a href="#mainnav" title="main navigation">main navigation</a> | <a href="#utilitynav" title="utility navigation">utility navigation</a> | <a href="#maincontent" title="main content">main content</a></p>
+</div>
+
+<!-- /com.omniupdate.div -->
+<div id="wrapper">
+<div id="subnav">
+<ul class="sectionname">
+<!-- com.omniupdate.div label="mainmenu" group="Editors: nav" path="/ssi/modules/nav_menu.htm" -->
+<!-- com.omniupdate.editor csspath="http://www.uchicago.edu/c/template_sites/screen.css" cssmenu="/c/mainnav.txt" width="374" div="#subnav" parag="no" -->
+<li><a href="/About Us.shtml">About Us</a></li>
+<li><a href="/experiment.shtml">Why Experiment?</a></li>
+<li><a href="/know/">Key Crime Policy Findings</a></li>
+<li><a href="/gun_violence/">Chicago Youth Gun Violence Initiative</a></li>
+<li><a href="/affiliate_projects.shtml">Affiliate Projects</a> </li>
+<li><a href="/news.shtml">Newsroom</a></li>
+<li><a href="/people.shtml">People</a></li>
+<li><a href="/contact.shtml">Contact Us</a></li>
+
+<!-- /com.omniupdate.div -->
+</ul>
+<!-- com.omniupdate.div label="searchbox" path="/ssi/template/search.htm" -->
+﻿
+<div id="sitesearch" class="staticmenu">
+<h3>SEARCH</h3>
+<!-- Google CSE Search Box Begins  --> <form action="http://www.uchicago.edu/search/" id="searchbox_000249264868219851947:dhjfmsy766q">
+<div><input name="cx" type="hidden" value="000249264868219851947:dhjfmsy766q" /><input name="cof" type="hidden" value="FORID:11" /><label id="search" for="searchtext">Search:</label><input id="searchtext" name="q" type="text" value="Search…" /><input id="submit" style="position:absolute" title="Go" alt="submit" name="sa" src="http://www.uchicago.edu/i/template/go.png" type="image" value="submit" /> <label id="thissite" for="esc"><input id="esc" checked="checked" name="sitesearch" type="radio" value="crimelab.uchicago.edu" />Crime Lab</label> <label id="uchicago" for="site"><input id="site" name="sitesearch" type="radio" value="uchicago.edu" />All of www.uchicago.edu</label></div>
+</form> <!-- Google CSE Search Box Ends --> <br class="clr" /></div>
+
+<!-- /com.omniupdate.div -->
+</div>
+<!-- main content begins here -->
+<div id="content">
+<a id="maincontent" name="maincontent"></a>
+<!-- com.omniupdate.div label="pagetitle" group="Editors: content" position="top" -->
+<!-- com.omniupdate.editor width="452" parag="no" toolbar="Empty" -->
+<h2>People</h2>
+<!-- /com.omniupdate.div -->
+
+<div class="imgrt">
+<!-- com.omniupdate.div label="image" group="Editors: content" break="break"--><!-- com.omniupdate.editor csspath="http://www.uchicago.edu/c/template_sites/screen.css" cssmenu="/c/maincontentimage.txt" width="214" --><img src="/i/chicago_night.jpg" alt="Chicago at night" width="198" height="278" />
+<p>(Photo by <a href="http://www.flickr.com/photos/myelectricsheep/343703624/">Christopher Alexander</a>)</p><!-- /com.omniupdate.div -->
+</div>
+<!-- com.omniupdate.div label="content" group="Editors: content" --><!-- com.omniupdate.editor csspath="http://www.uchicago.edu/c/template_sites/screen.css" cssmenu="/c/maincontent.txt" width="452" --><h3>Crime Lab Directors</h3>
+<p><a href="http://harrisschool.uchicago.edu/faculty/web-pages/jens-ludwig.asp"> </a><a href="http://harrisschool.uchicago.edu/faculty/web-pages/jens-ludwig.asp"><strong>Jens Ludwig</strong></a> (Director), is the McCormick Foundation Professor of Social Service Administration, Law, and Public Policy at the University of Chicago, Non-Resident Senior Fellow in Economic Studies at the Brookings Institution, Research Associate at the National Bureau of Economic Research (NBER), and co-director of the NBER's Working Group on the Economics of Crime. Ludwig has been involved for the past dozen years with the evaluation of a large HUD-funded housing-mobility experiment known as Moving to Opportunity (MTO), which includes a major demonstration site on the south side of Chicago. He is also one of the nation's leading gun policy researchers, whose publications on the topic include Gun Violence: The Real Costs with Philip Cook (Oxford, 2000) and Evaluating Gun Policy, co-edited with Cook (Brookings, 2003). In 2006 he was awarded the David Kershaw Prize by the Association for Public Policy Analysis and Management for distinguished contributions to public policy by the age of 40.<br /><br /><a href="http://www.ssa.uchicago.edu/faculty/h-pollack.shtml"><strong>Harold Pollack</strong></a> (Co-Director), is&nbsp;Professor at the University of Chicago's School of Social Service Administration, and faculty chair of the Center for Health Administration Studies.&nbsp;&nbsp;He has published widely at the interface between poverty policy and public health, including a number of studies about harm reduction for injection drug users and efforts to reduce drug abuse and dependence. His recent work appears in&nbsp;<em>Addiction</em>,&nbsp;<em>Health Services Research</em>,<em>&nbsp;American Journal of Public Health</em>,<em>&nbsp;Journal of the American Medical Association</em>, and other publications. He has been appointed to three expert committees of the National Academy of Sciences.</p>
+<p><strong>Roseanna Ander</strong> (Executive Director). Prior to joining the Crime Lab, Ander served for 10 years as Program Officer for the Gun Violence program at the Joyce Foundation in Chicago, responsible for the foundation's $3 million in grant-making each year for research and other activities to understand and reduce gun violence. In addition she developed and implemented the Foundation's $6 million, three year Early Childhood Education initiative. Ander spear-headed a number of new Joyce Foundation initiatives to reduce youth gun violence including working with the International Association of Chiefs of Police (IACP) to convene a national summit of law enforcement leaders around gun violence prevention. In addition, she oversaw the Foundation's work to promote the development and implementation of the National Violent Death Reporting System, which is now housed at the Centers for Disease Control and Prevention and being implemented in 17 states. Prior to joining the Joyce Foundation, she served as the Public Health Liaison for Attorney General Scott Harshbarger of Massachusetts. She holds a Master of Science degree in health policy from Harvard School of Public Health.<br /><br /><strong>Laura Brinkman</strong> (Associate Director), joined the Crime Lab in November, 2009. She has previously worked with the Justice and Violence Program at Chicago Metropolis 2020 providing support for a statewide initiative to reform prisoner reentry policy. She has also assisted research at the Sentencing Project, in Washington, D.C.,&nbsp;including research on felony disenfranchisement, juvenile justice, and the&nbsp;impact changes in sentencing have on deterring criminal behavior.&nbsp; Brinkman holds a Master of Public Policy&nbsp;degree from the University of Chicago.&nbsp;<br />&nbsp;&nbsp;<br /><strong>Sara Heller</strong> (Doctoral Fellow) is a&nbsp;doctoral student&nbsp;at the University of Chicago's Harris School of Public Policy Studies, where she holds an Institute of Education Sciences Pre-Doctoral Fellowship. Her research focuses on how education and social policy can reduce inequality of opportunity and encourage economic mobility, as well as how alternatives to mass incarceration can cost-effectively reduce recidivism and improve educational attainment.&nbsp;&nbsp;</p>
+<hr />
+<h3>Crime Lab Affiliates</h3>
+<p style="text-align: left;"><strong>David Abrams</strong> is an Assistant Professor of Law, Business, and Public Policy at the University of Pennsylvania Law School and the Wharton School. His recent research includes investigations into attorney performance, judicial bail setting, specific and general deterrence, and the impact of race in criminal sentencing. Abrams received his PhD in economics from MIT and was the John M. Olin Fellow in Law and Economics at the University of Chicago and winner of the 2007 Coase Prize in Law and Economics.</p>
+<p><a href="http://www.hks.harvard.edu/criminaljustice/people/anthony_braga.htm"><strong>Anthony Braga</strong></a> is Senior Research Associate in Criminal Justice Policy and Management and Lecturer in Public Policy at Harvard University's John F. Kennedy School of Government, as well as Senior Research Fellow in the Berkeley Center for Criminal Justice at Boalt Hall School of Law, University of California, Berkeley. His research focuses on working with criminal justice agencies to develop crime prevention strategies to deal with urban problems such as gang violence, illegal gun markets, and violent crime hot spots.</p>
+<p><strong>Henry H. Brownstein</strong> is Senior Vice President and Director of Substance Abuse, Mental Health and Criminal Justice Studies at NORC at the University of Chicago. He has published dozens of articles and book chapters on topics including violence and violent crime, drugs and violence, illicit drug markets, and the relationship between research and policy. He is co-editor of <em>Violence: From Theory to Research</em> (2004), and his recent books include <em>The Problems of Living in Society</em> (2003) and <em>The Social Reality of Violence and Violent Crime</em> (2000). He earned his Ph.D. in sociology in 1977 from Temple University. He was recently elected Chair of the Section on Alcohol, Drugs and Tobacco of the American Sociological Association.</p>
+<p><a href="http://harrisschool.uchicago.edu/faculty/web-pages/kerwin-charles.asp"><strong>Kerwin Charles</strong></a> is the Steans Family Professor in the Harris School of Public Policy at the University of Chicago, as well as a Research Associate at the National Bureau of Economic Research (NBER) in Cambridge, MA. His research focuses on a range of subjects in the broad area of empirical social policy evaluation, including efforts to understand and remedy racial disparities in economic conditions, health and other outcomes.</p>
+<p><strong>Gretchen Cusick </strong>is a Senior Researcher at Chapin Hall at the University of Chicago. Her research focuses on the transition to adulthood among vulnerable populations, reentry of juvenile offenders, and juvenile justice system efforts to improve service provision and outcomes for youth. She earned her PhD in Sociology with an emphasis in crime, law, and justice and a departmental certificate in quantitative methods from the Pennsylvania State University.</p>
+<p><strong>Dr. Emil F. Coccaro </strong>is Ellen C. Manning Professor and Chair of the Department of Psychiatry and Behavioral Neuroscience&nbsp; at The University of Chicago. Dr. Coccaro has broadly been involved in the study of the biology, genetics, neuroscience, and treatment of impulsive aggression in human subjects. Currently, he is most involved in the behavioral genetics <br />and neuroscience study of social and emotional information processing (SEIP). His newest work relates to the development of assessments of SEIP and to the neuroscience of SEIP in aggressive and non-aggressive subjects. In addition, Dr. Coccaro continues to process data from his recently completed NIMH grants and other projects related to: a) family study of aggression, b) twin study of aggression, c) anti-aggressive treatment response study comparing fluoxetine vs. divalproex vs. placebo, d) fMRI and DTI studies of aggressive and non-aggressive subjects.</p>
+<p><a href="http://fds.duke.edu/db/aas/PublicPolicy/cook"><strong>Philip Cook</strong></a>, ITT / Terry Sanford Professor of Public Policy at Duke University and Research Associate of the NBER, is one of the world's leading experts on the economics of crime, particularly gun violence, and has served as consultant to the U.S. Department of Justice (Criminal Division) and to the U.S. Department of Treasury (Enforcement Division). He is an elected fellow of the American Society of Criminology and an elected member of the National Academy of Science's Institute of Medicine. </p>
+<p><a href="http://harrisschool.uchicago.edu/faculty/web-pages/jeffrey-grogger.asp"><strong>Jeffrey Grogger</strong></a>, is Irving Harris Professor in Urban Policy, University of Chicago and Research Associate of the NBER, and has previously served as co-editor of the Journal of Human Resources and as a research fellow n the Office of the Attorney General of the State of California. Professor Grogger is a labor economist with an interest in low-income populations, and has conducted a number of research projects on crime, including an evaluation of gang injunctions in Los Angeles and a study of racial profiling that won the Outstanding Statistical Application Award for 2007 from the American Statistical Association.</p>
+<p><a href="http://www.chicagogsb.edu/faculty/bio.aspx?person_id=12824983552"><strong>Jonathan Guryan</strong></a> is an Associate Professor of Human Development and Social Policy and of Economics, Faculty Fellow at the Institute for Policy Research and a courtesy member of the Economics Department and the Kellogg School of Business at Northwestern University. He is also a Faculty Research Fellow at the National Bureau of Economic Research, a Research Consultant at the Federal Reserve Bank of Chicago. Much of his research falls into two main categories, understanding the sources and consequences of racial inequality and the economics of education. His work on these subjects has been published in leading journals such as the American Economic Review, the Journal of Political Economy, Developmental Psychology, Educational Psychology, and the Review of Economics and Statistics.</p>
+<p><a href="http://publicpolicy.pepperdine.edu/academics/faculty/default.htm?faculty=angela_hawken"><strong>Angela Hawken</strong></a> is Assistant Professor of Economics and Policy Analysis at the School of Public Policy at Pepperdine University. Hawken holds a PhD from the RAND Graduate School, and has research interests in the areas of illicit drugs, crime, corruption, early education, sentencing, and tort reform. In addition to her evaluation of Hawaii's HOPE experiment to reduce drug use and recidivism among probationers, she has several ongoing international research projects including a study of methadone delivery in the country of Georgia, with funding from the Soros Foundation.</p>
+<p><a href="http://steinhardt.nyu.edu/faculty_bios/view/Jennifer_Hill"><strong>Jennifer Hill</strong></a> is Associate Professor of Applied Statistics at New York University's Steinhardt School of Culture, Education and Human Development. She works at the intersection of social policy research and methodological development, and has published in a variety of leading journals including Journal of the American Statistical Association, American Political Science Review, American Journal of Public Health, and Developmental Psychology. She earned her doctorate in statistics at Harvard University and completed a post-doctoral fellowship in Child and Family Policy at Columbia University.</p>
+<p><a href="http://sitemaker.umich.edu/bajacob/home"><strong>Brian Jacob</strong></a> is Walter H. Annenberg Professor of Education Policy at the University of Michigan, Director of the university's Center on Local, State, and Urban Policy (CLOSUP), an Executive Committee Member of the National Poverty Center, and Research Associate of the NBER. He has conducted influential studies on a wide range of topics in the areas of crime, education, and other social policies. He is the 2008 recipient of the Association of Public Policy Analysis and Management's David Kershaw Prize for distinguished contributions to public policy by age 40.</p>
+<p><strong>Kristen Jacobson </strong>is Assistant Professor in the Department&nbsp; of Psychiatry and Behavioral Neuroscience at The University of Chicago. Her current research uses interdisciplinary approaches to examine the joint interplay of genetic, environmental, biological, and social influences on the development of antisocial behavior, including aggressive,delinquent, and substance use behavior. Her phenotypic work has focused primarily on applying ecological models to studies of children and adolescents to determine whether the importance of risk and protective factors varies across different contexts. Her behavioral genetic work has primarily been focused on: 1) the importance of genes and environments on individual differences over the life course; 2) whether there is genetic heterogeneity of antisocial behavior; and 3) gene X environment interactions. Newer research interests concern the underlying neurobiology of aggression and antisocial behavior, and the capacity of environmental experiences to alter biological and genetic effects.</p>
+<p><strong>Mark Kleiman</strong> is a Professor of Public Policy in the UCLA School&nbsp; of Public Affairs. His latest book, When Brute Force Fails: How to Have Less Crime and Less Punishment (Princeton University Press), was chosen by The Economist as one of the “books of the year” for 2009. He edits the Journal of Drug Policy Analysis and blogs at The Reality-Based Community http://www.samefacts.com. He is also the author of Against Excess: Drug Policy for Results. In addition to his academic work, Mr. Kleiman provides advice to local, state, and national governments on crime control and drug policy. His ideas about substituting drug testing and sanctions for mandated treatment in the management of drug-involved offenders have been vindicated by the success of the HOPE project in Hawaii.</p>
+<p><a href="http://health.bsd.uchicago.edu/People/Lahey-Benjamin"><strong>Benjamin Lahey</strong></a> is Irving B. Harris Professor of Health Studies and Psychiatry at the University of Chicago. An authority on attention deficit disorder, disruptive behaviors, and conduct problems in both children and adolescents, he has published widely on the epidemiology and development of these disorders. He is the recipient of many honors, including being named president of the International Society for Research in Child and Adolescent Psychopathology.</p>
+<p><a href="http://pricetheory.uchicago.edu/levitt/home.htm"><strong>Steve Levitt</strong></a> is the William B. Ogden Distinguished Service Professor at the University of Chicago, Director of the Becker Center on Chicago Price Theory, and Research Associate of the NBER. Professor Levitt has made groundbreaking contributions to the study of crime and a range of other social problems. He is an elected Fellow of the American Academy of Arts and Sciences, and winner of the American Economic Association's John Bates Clark prize for contributions to economics by age 40. His book Freakonomics has received numerous awards, including the Quill Award for Best Business Book of the year.</p>
+<p><a href="http://home.uchicago.edu/~jlist/index.html"><strong>John List</strong></a> is Professor of Economics, University of Chicago, University Fellow of Resources for the Future, and Research Associate of the NBER, and formerly served as a Senior Economist at the President's Council on Economic Advisors. Professor List is one of the world's leading experts in the use of field experiments to address a wide range of economic and other scientific and public policy questions.</p>
+<p><strong>John MacDonald</strong> is the Jerry Lee Assistant Professor of&nbsp;Criminology at the University of Pennsylvania and adjunct Behavioral Scientist at RAND. He has expertise in the social epidemiology of violence and homicide. He has served as a principal investigator and co-principal investigator on violence and injury prevention research projects, studying city and neighborhood-level covariates of homicide, the effect of community policing on violent crime rates, evaluated a domestic violence intervention aimed at reducing intimate partner violence, and police-on-citizen use of deadly force. In 2009 he was awarded the Young Experimental Scholar Award by the Academy of Experimental Criminology for significant contributions to experimental research.<br /><br /><strong>Michael McCloskey</strong> is Assistant Professor of Psychiatry at the University of Chicago. His research includes studies of Cognitive Behavioral Therapy interventions for individuals experiencing impulsive aggression disorders. He has also researched the comparative effectiveness of different treatment modalities in treating aggression and self-aggression-related disorders.</p>
+<p><a href="http://www.law.yale.edu/faculty/TMeares.htm"><strong>Tracey Meares</strong></a> is the Walton Hale Hamilton Professor of Law at Yale Law School, and was previously the Max Pam Professor of Law at the University of Chicago. Professor Meares is leading the research team evaluating the effects of the city of Chicago's Project Safe Neighborhoods activities to reduce gun crime. After graduating from the University of Chicago Law School she clerked for Judge Harlington Wood, Jr. of the U.S. Court of Appeals for the Seventh Circuit, then served as an Honors Program Trial Attorney in the Antitrust Division in the United States Department of Justice. </p>
+<p><a href="http://www.law.uchicago.edu/faculty/miles"><strong>Thomas Miles</strong></a> is Assistant Professor of Law at the University of Chicago, and co-editor of the Journal of Legal Studies. Professor Miles has written widely on a range of empirical topics in the economics of crime and law and economics. After receiving his PhD in economics from the University of Chicago and then his JD from Harvard Law School, Miles was a clerk to the Honorable Jay S. Bybee of the U.S. Court of Appeals for the 9th Circuit.</p>
+<p><strong>Mallory O'Brien</strong>, is the Director of the Milwaukee Homicide Review Commission and has been responsible for its development, implementation, and evaluation since 2004. Dr. O'Brien is trained as an epidemiologist and has worked in the field of violent injury prevention for the past 15 years. O'Brien is currently a researcher with the Sanford Policy Institute at Duke University. She received her degrees from University of Wisconsin-Madison. </p>
+<p><a href="http://www.ssa.uchicago.edu/faculty/cmpayne.shtml"><strong>Charles Payne</strong></a> is the Frank P. Hixon Professor in the University of Chicago's School of Social Service Administration. His interests include urban education and school reform, social inequality, and social change. He is on the Steering Committee for the Consortium on Chicago School Research, and on the Research Advisory Committee for the Chicago Annenberg Project. Payne was also founding director of the Urban Education Project in Orange, New Jersey, a nonprofit community center that broadens educational experiences for urban youngsters.</p>
+<p><a href="http://www2.las.uic.edu/depts/cjus/faculty/dennis-rosenbaum-2.html"><strong>Dennis Rosenbaum</strong></a> is Professor of Criminal Justice and Psychology at the University of Illinois at Chicago. His research focuses on the evaluation of community-based or community-focused initiatives to prevent violence, drug abuse, and disorder. He has sought to advance the theory and measurement of anti-crime partnerships among law enforcement agencies, social service providers, community groups, schools and residents.</p>
+<p><a href="http://harrisschool.uchicago.edu/faculty/web-pages/diane-whitmore.asp"><strong>Diane Whitmore Schanzenbach</strong></a>&nbsp;is Associate Professor of Public Policy at Northwestern University. Her research focuses on education policy and child health. She&nbsp; is a research consultant at the Federal Reserve Bank of Chicago. In 1996-7 she worked for the President's Council of Economic Advisers. </p>
+<p><strong>Laurence Steinberg</strong>, Ph.D., is the Distinguished University Professor and Laura H. Carnell Professor of Psychology at Temple University. He was educated at Vassar College, where he graduated with a degree in Psychology in 1974, and at Cornell University, where he received his Ph.D. in Developmental Psychology in 1977. Dr. Steinberg is Past-President of the Division of Developmental Psychology of the American Psychological Association and a former President of the Society for Research on Adolescence. He is a Fellow of the American Psychological Association and the Association for Psychological Science, and was Director of the John D. and Catherine T. MacArthur Foundation Research Network on Adolescent Development and Juvenile Justice. He has been the recipient of numerous honors, including lifetime achievement awards from the Society for Research on Adolescence and the American Psychological Association and teaching awards from the University of California, the University of Wisconsin, and Temple University. In 2009, he was named the first recipient of the Klaus J. Jacobs Research Prize, one of the largest prizes ever awarded to a social scientist, for his contributions to improving the lives of young people and their families.&nbsp;</p>
+<p>
+<p>For more information please contact:</p>
+<p>Ander, Executive Director<br />55 East Monroe 30th Floor<br />Chicago, IL 60603<br />Direct: (312) 325-2544<br />Fax: (312) 759-4004<br />rander@uchicago.edu</p>
+</p><!-- /com.omniupdate.div -->
+</div>
+<br class="clr" />
+</div>
+<div id="clearfoot">&nbsp;</div>
+</div>
+<!-- footer begins here -->
+<div id="footerwrapper">
+<div id="footer">
+<!-- com.omniupdate.div label="footer" path="/ssi/template/footer.shtml" -->
+<p><a id="copylink" href="#">©</a> 2011<a href="http://www.uchicago.edu/">The University of Chicago</a><br /><a href="/">Crime Lab<br /></a>Homepage photo by <a href="http://flickr.com/photos/fiahless/438708411/">Felix Petersen</a><a href="http://www.flickr.com/photos/docsearls/2514718670/"> </a></p>
+<p><span class="style2">55 East Monroe 30th Floor</span><br />Chicago, IL 60603<br /><span class="style2">312.759.4291&nbsp;</span></p>
+
+<!-- /com.omniupdate.div -->
+</div>
+</div>
+<!-- com.omniupdate.div label="scripts" path="/ssi/template/scripts.htm" -->
+<script src="http://www.uchicago.edu/js/prototype.js" type="text/javascript"></script>
+<script src="http://www.uchicago.edu/js/scriptaculous.js" type="text/javascript"></script>
+<script src="http://www.uchicago.edu/js/global.js" type="text/javascript"></script>
+<script src="http://www.uchicago.edu/js/sifr-config.js" type="text/javascript"></script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8206811-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<!-- /com.omniupdate.div -->
+<!-- com.omniupdate.button --><div id="hide"><a id="ouhook" href="http://www.omniupdate.com/oucampus-uchicago/de.jsp?user=Crimelab&amp;site=Crimelab&amp;path=%2Fpeople.shtml"><img src="/px.gif" width="1" height="1" alt="#" /></a></div><!-- /com.omniupdate.button --></body>
+</html>

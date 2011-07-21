@@ -1,0 +1,511 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!-- com.omniupdate.properties -->
+<title>Report for Mayor | The University of Chicago</title>
+<!-- /com.omniupdate.properties -->
+<meta name="revised" content="Tuesday, 03-Mar-2009 10:02:17 CST" />
+<!-- com.omniupdate.div label="head" path="/ssi/template/head.shtml" -->
+<link rel="stylesheet" href="http://www.uchicago.edu/c/template_sites/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/c/sitespecific.css" type="text/css" media="screen, projection" />
+<!--[if IE 6]>
+<link rel="stylesheet" href="http://www.uchicago.edu/c/template_sites/ie6.css" type="text/css" media="screen, projection" />
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="http://www.uchicago.edu/c/template_sites/ie7.css" type="text/css" media="screen, projection" />
+<![endif]-->
+<link rel="stylesheet" href="http://www.uchicago.edu/c/template_sites/print.css" type="text/css" media="print" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="en-us" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="copyright" content="Copyright (c) 2011 The University of Chicago, All Rights Reserved." />
+<link rel="home" href="/" title="Home" />
+<script type="text/javascript" src="http://www.uchicago.edu/js/ouhook.js"></script>
+
+<!-- /com.omniupdate.div -->
+<!-- com.omniupdate.properties -->
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<!-- /com.omniupdate.properties -->
+</head>
+<body class="lo5 two">
+
+<div id="container">
+<!--masthead begins here -->
+<!-- com.omniupdate.div label="masthead" path="/ssi/template/masthead.shtml" -->
+<div id="wordmarkprint"><img src="http://www.uchicago.edu/i/template/uc_wordmark_hires.gif" alt="The University of Chicago" height="1" width="1" /></div>
+<div id="masthead">
+<h1><a href="http://www.uchicago.edu/" title="University of Chicago Home" id="wordmark">The University of Chicago</a>
+<a href="/" title="Home" id="dept_title">Leo Strauss Center</a></h1>
+<p>Skip to: <a href="#mainnav" title="main navigation">main navigation</a> | <a href="#utilitynav" title="utility navigation">utility navigation</a> | <a href="#maincontent" title="main content">main content</a></p>
+</div>
+
+<!-- /com.omniupdate.div -->
+<div id="wrapper">
+<div id="subnav">
+<ul class="sectionhead">
+<!-- com.omniupdate.div label="subnav_top" group="Editors: nav" path="/gun_violence/subnav_top.htm" -->
+<!-- com.omniupdate.editor width="374" div="#subnav" parag="no" -->
+<li><a href="/gun_violence">Chicago Youth Gun Violence Initiative</a></li>
+<!-- /com.omniupdate.div -->
+</ul>
+<ul>
+<!-- com.omniupdate.div label="subnav_bottom" group="Editors: nav" path="/gun_violence/subnav_bottom.htm" -->
+<!-- com.omniupdate.editor width="374" div="#subnav" parag="no" -->
+<li><a href="/gun_violence/report.shtml">Report: Gun Violence Among School-Age Youth in Chicago</a></li>
+<li><a href="/gun_violence/rfloi.shtml">Design Competition</a>&nbsp;(now closed)</li>
+<li><a href="/gun_violence/faq.shtml">Design Competition FAQ</a></li>
+<li><a href="/gun_violence/Winning Entry BAM Sports Edition.shtml">Winning Entry: Becoming a Man (B.A.M.©) - Sports Edition</a></li>
+
+<!-- /com.omniupdate.div -->
+</ul>
+<ul class="sectionname">
+<!-- com.omniupdate.div label="mainmenu" group="Editors: nav" path="/ssi/modules/nav_menu.htm" -->
+<!-- com.omniupdate.editor csspath="http://www.uchicago.edu/c/template_sites/screen.css" cssmenu="/c/mainnav.txt" width="374" div="#subnav" parag="no" -->
+<li><a href="/About Us.shtml">About Us</a></li>
+<li><a href="/experiment.shtml">Why Experiment?</a></li>
+<li><a href="/know/">Key Crime Policy Findings</a></li>
+<li><a href="/gun_violence/">Chicago Youth Gun Violence Initiative</a></li>
+<li><a href="/affiliate_projects.shtml">Affiliate Projects</a> </li>
+<li><a href="/news.shtml">Newsroom</a></li>
+<li><a href="/people.shtml">People</a></li>
+<li><a href="/contact.shtml">Contact Us</a></li>
+
+<!-- /com.omniupdate.div -->
+</ul>
+<!-- com.omniupdate.div label="searchbox" path="/ssi/template/search.htm" -->
+﻿
+<div id="sitesearch" class="staticmenu">
+<h3>SEARCH</h3>
+<!-- Google CSE Search Box Begins  --> <form action="http://www.uchicago.edu/search/" id="searchbox_000249264868219851947:dhjfmsy766q">
+<div><input name="cx" type="hidden" value="000249264868219851947:dhjfmsy766q" /><input name="cof" type="hidden" value="FORID:11" /><label id="search" for="searchtext">Search:</label><input id="searchtext" name="q" type="text" value="Search…" /><input id="submit" style="position:absolute" title="Go" alt="submit" name="sa" src="http://www.uchicago.edu/i/template/go.png" type="image" value="submit" /> <label id="thissite" for="esc"><input id="esc" checked="checked" name="sitesearch" type="radio" value="crimelab.uchicago.edu" />Crime Lab</label> <label id="uchicago" for="site"><input id="site" name="sitesearch" type="radio" value="uchicago.edu" />All of www.uchicago.edu</label></div>
+</form> <!-- Google CSE Search Box Ends --> <br class="clr" /></div>
+
+<!-- /com.omniupdate.div -->
+</div>
+<!-- main content begins here -->
+<div id="content">
+<a id="maincontent" name="maincontent"></a>
+<!-- com.omniupdate.div label="pagetitle" group="Editors: content" position="top" -->
+<!-- com.omniupdate.editor width="452" parag="no" toolbar="Empty" -->
+<h2>Chicago Youth Gun Violence Initiative</h2>
+<!-- /com.omniupdate.div -->
+
+<div class="imgrt">
+<!-- com.omniupdate.div label="image" group="Editors: content" break="break"--><!-- com.omniupdate.editor csspath="http://www.uchicago.edu/c/template_sites/screen.css" cssmenu="/c/maincontentimage.txt" width="214" --><img src="/i/chicago_midway.jpg" alt="Chicago from Midway Airport" width="198" height="278" />
+<p>(Photo by <a href="http://www.flickr.com/photos/dlkinney/116632667/">David Kinney</a>)</p><!-- /com.omniupdate.div -->
+</div>
+<!-- com.omniupdate.div label="content" group="Editors: content" -->
+<!-- com.omniupdate.editor csspath="http://www.uchicago.edu/c/template_sites/screen.css" cssmenu="/c/maincontent.txt" width="452" -->
+
+<h3>Report: Gun Violence Among School-Age Youth in Chicago</h3>
+<p><a href="/pdf/Gun_Violence_Report.pdf"><strong>Download this report as a PDF</strong></a></p>
+<ul>
+ <li><a href="#1">Introduction</a></li>
+ <li><a href="#2">Victims aren't the only victims</a></li>
+ <li><a href="#3">Who are the youth involved with gun violence in Chicago?</a></li>
+ <li><a href="#4">When do we lose these youth?</a></li>
+ <li><a href="#5">What can we do about the youth gun violence problem?</a></li>
+</ul>
+
+<hr />
+
+<h4>Introduction<a name="1">&nbsp;</a></h4>
+
+<p>
+A total of 510 people were murdered in Chicago during 2008. Eighty percent of these victims were killed by gunfire. Nearly half were between the ages of 10 and 25, and the vast majority were male.[1] The dramatic overrepresentation of both young males and firearms in homicide is not unique to Chicago, nor are these patterns new. Yet over the past 50 years, our society has made far less progress in understanding how to protect our citizens from gun violence (and violence more broadly) than we have learned about how to protect citizens from other serious threats to life and health. From 1950 to 2005, the overall age-adjusted death rate in the United States declined by nearly 45 percent, from 1,446 to 799 deaths per 100,000 people. This decline was driven in large part by massive drops in deaths from heart disease and cerebrovascular diseases (stroke), as seen in figure 1, while infant mortality rates also declined dramatically. In contrast, despite some cyclical ups and downs, the murder rate in 2005 remained about 20 percent higher than its 1950 value.[2]
+</p>
+
+<p>
+<br />
+<img src="/i/report_figure1.png" style="border:1px #c0c0c0 solid;" alt="Trends in death rates for selected causes (graph)" /><br />
+
+<strong>Figure 1:</strong> Trends in death rates for selected causes, United States, 1950-2005<br />
+<small>Source: National Center for Health Statistics.</small>
+</p>
+<p>
+<strong>Why have we made such dramatic progress in reducing deaths from disease while homicide remains such a persistent problem throughout the United States?</strong><br />
+We believe one answer is that data and evidence are generally taken more seriously in medicine than in the area of violence. Before any new cholesterol drug or heart stent is used by the public, the Federal Drug Administration requires a rigorous series of randomized clinical trials to determine whether these medical innovations are actually effective.
+</p>
+<p>
+In contrast, federal, state, and local governments throughout the United States have implemented a wide variety of innovative programs to reduce gun violence by youth and young adults over the past 50 years&#x2014;but almost never in a way that can be rigorously evaluated. The logic behind many of the programs that have been tried often seems quite promising. Claims of dramatic success are not in short supply. And yet the youth gun violence problem remains. The lesson is that progress in addressing youth gun violence in Chicago, or anywhere, is extremely difficult without guidance about what programs work, for whom, why, and how they can be improved.
+</p>
+<p>
+<strong>This report summarizes the analysis of a variety of administrative data and surveys,</strong> as well as interviews and focus groups that the Crime Lab has conducted with people and organizations all over Chicago, to answer three key questions:
+</p>
+
+<ol>
+ <li><strong>Who are the youth involved with gun violence in Chicago as victims or
+as perpetrators?</strong> It is well known that low-income, gang-involved young
+minority males are vastly overrepresented as both victims and offenders of
+gun violence. Our new research for this report highlights several additional
+contributing factors&#x2014;such as alcohol use, mental health problems, and perhaps particularly school failure&#x2014;which seem to be underutilized targets for
+intervention. And while many people despair that nothing can be done to
+keep guns away from youth in a country with over 250 million guns in
+circulation, our research&#x2014;perhaps surprisingly&#x2014;argues that there are
+productive opportunities for disrupting youth access to guns.
+</li>
+<li>
+<strong>When do we lose these youth?</strong> At some level, the answer flows back to the
+first five years of life. But our analysis suggests that another critical turning point seems to occur as children approach middle school age, when both arrest and
+dropout rates begin to increase. Another important lesson from our analysis is that most &#x201c;criminal careers&#x201d; are relatively brief, so that no youth is ever really "lost." These findings taken together suggest we should be thinking about interventions that both start early (as young as age 10) and help young people navigate the highest-risk years, which may run through the early 20s.
+</li>
+<li><strong>What can we do about the youth gun violence problem?</strong> Our data analysis
+suggests the value of what we call focused prevention, which involves the
+strategic use of resources to prevent youth gun violence from happening,
+rather than just addressing the problem after the fact. Our research, together
+with a growing body of evidence from psychology and behavioral economics, suggests that one way to prevent youth gun violence is to make the incentives that youth face to engage in prosocial activities (particularly schooling) and avoid risky behaviors (such as gun involvement) more swift, certain, and salient.</li>
+</ol>
+
+<p>
+<strong>One model for the long-term aspiration of the University of Chicago Crime Lab</strong>
+is the Massachusetts Institute of Technology&#x2019;s Poverty Action Lab, which partners with governments and nongovernmental organizations around the world to identify the most effective (and cost-effective) ways of improving health and reducing poverty in the developing world. Our goal is similar, but with a focus closer to home. The United States Department of Education has tried to support the increased use of evidence-based practice in schools through the creation of the Institute of Education Sciences, but nothing similar currently exists for delinquency and violence. We hope that, in time, Chicago will become the global focal point for thinking about how to address the problem of youth gun violence.
+</p>
+<p>
+<strong>Our report is organized into four sections</strong>. Section IIII reviews our analysis of
+the costs of youth gun violence in Chicago. Sections IIIIIIIII, IV, and V address each
+of the above questions in turn.
+</p>
+
+
+<hr />
+
+<h4>Victims aren't the only victims<a name="2">&nbsp;</a></h4>
+<p>
+Chicago&#x2019;s murder rate has markedly declined over the past two decades. Yet in
+the past few years, Chicago, like many other large American cities, has experienced an increase in lethal violence. A total of 510 Chicagoans were murdered in 2008, compared to 445 in 2007. Even with this recent increase, Chicago&#x2019;s homicide rate is nowhere near the highest in the nation. Nevertheless, our homicide rate remains well above that of such peer cities as New York, Los Angeles, and London, differences that are driven mostly by elevated rates of gun homicide in Chicago.
+</p.
+<p>
+Chicago&#x2019;s violence&#x2014;and particularly gun violence&#x2014;is unevenly distributed across communities. Shootings are disproportionately concentrated in our most disadvantaged neighborhoods, a pattern that is common to all big cities in the United States. To understand the impact of youth gun violence on these communities, the Crime Lab conducted interviews and focus groups with almost 100 residents throughout Chicago. These men, women, and youth represented diverse perspectives on the problem, including students and other youth, single mothers, faith leaders, educators, teachers, police officers, emergency medicine physicians, and other emergency responders.
+</p>
+<p>
+Many parents were exhausted by the strain of trying to raise a family in the midst of what several called a war zone. Consider, for example, one mother&#x2019;s personal story of loss:
+</p>
+
+<blockquote><p>
+In 1999, my son was killed by these two guys. I had to go to the hospital and see my son&#x2019;s lifeless body laying on a slab. Then I had to go to the morgue to see where they cut his head open for an autopsy. . . . Within a month . . . my other brother got killed. . . . And it needs to stop. People [are] just taking people&#x2019;s kids&#x2019; lives for no apparent reason. They have no value on life. They don&#x2019;t know what the parents go through, how they feel.
+</p>
+</blockquote>
+</p>
+<p>
+Our interviews and focus groups highlight that even families who are not directly victimized by gun violence suffer from the fear of being shot that pervades their communities, which is what we mean by &#x201c;victims aren&#x2019;t the only victims.&#x201d; As expressed by one mother:
+</p>
+
+<blockquote>
+<p>
+One of our young students was shot and killed. And we as a school grieved over that issue. . . . We are angry beyond words that we have to struggle so much every single day just to find some level of normalcy.
+</p>
+<p>
+We have to drive our kids everywhere. We can&#x2019;t go to work full time because we worry about how are our kids gonna get to and from school? I mean how are they gonna go to the corner store? We can&#x2019;t send one 15-year-old girl down to the corner store three houses down from ours because there are too many kids hanging around on the corner. There are grown men hanging on the corner. We know they&#x2019;re packing. We know they&#x2019;re selling. . . . The hardest part is that it&#x2019;s an everyday struggle and it&#x2019;s exhausting and it&#x2019;s infuriating because when you want to build a successful future for your children. . . .</p>
+<p>
+It&#x2019;s ongoing and it&#x2019;s 365 days a year, 24 hours a day. It&#x2019;s not like, &#x201c;Oh, the summer&#x2019;s here. It&#x2019;s bad.&#x201d; Yeah, it is bad in the summer, but it&#x2019;s bad in the winter. It&#x2019;s bad all the time. The drugs don&#x2019;t stop. The violence doesn&#x2019;t stop. We&#x2019;re tired.
+</p>
+</blockquote>
+</p>
+<p>
+In fact, the toll of gun violence in Chicago extends far beyond the most disadvantaged neighborhoods of the city, in which shootings are disproportionately concentrated. A study coauthored by Crime Lab member Steve Levitt of the University of Chicago found that suburban flight seems to be substantially affected by homicide. Levitt&#x2019;s analysis of data on a national sample of urban areas suggests that, on average, every homicide reduces a city&#x2019;s population by 70 people. His results imply that the increase in homicides that Chicago experienced from 2007
+to 2008 reduced the city&#x2019;s population by nearly 5,000 people.
+</p>
+<p>
+<strong>Violence also poses key obstacles to the economic vitality</strong> of low-income communities. Businesses are more likely to close early in higher-crime neighborhoods (Hamermesh, 1999). Even more importantly, high crime rates
+deter business investment, particularly the creation, growth, or relocation
+of service-related establishments that would be a valuable source of employment
+to lower-skilled workers (Greenbaum and Tita, 2004).
+</p>
+<p>
+For these reasons and others, the direct and indirect costs of gun violence are large and are shared by the entire Chicago community. While the most tangible costs, such as the treatment of gunshot wounds, garner the most attention, in financial terms these are a surprisingly small part of the full social costs arising from such violence. Every crime-related gunshot wound imposes costs on society on the order of $1 million, according to previous research by Crime Lab members Philip Cook of Duke University and Crime Lab codirector Jens Ludwig of the University of Chicago (Cook and Ludwig, 2000; Ludwig and Cook, 2001). Over the past 10 years, Chicago has averaged roughly 420 gun homicides per year. Our new Crime Lab calculations suggest the social costs that gun violence imposes on Chicago over this period are on the order of about $2.5 billion each year&#x2014;about $2,500
+per Chicago household.[3]
+</p>
+<hr />
+
+<h4>Who are the youth involved with gun violence in Chicago?<a name="3">&nbsp;</a></h4>
+<p>The University of Chicago Crime Lab&#x2019;s investigation of administrative data from many diverse sources underscores the distressingly familiar demographic patterns of youth gun violence. Both victims and offenders are disproportionately likely to be young African American males;[4] to come from poor, single-parent households; and to hail from some of the city&#x2019;s most disadvantaged neighborhoods. Despite concern in the popular media that immigration contributes to violence, Hispanic/Latino youth are represented as homicide victims roughly in proportion to their presence in the Chicago population.[5] Similar patterns are observed in most major American cities.
+</p>
+<p>
+Research in criminology consistently finds that 6 percent of each birth cohort
+accounts for up to half of all crime and two-thirds of all violent crime (see, for
+example, Tracy, Wolfgang, and Figlio, 1990). People who have been arrested at
+least three times have more than a two-thirds chance of being arrested again.
+The disproportionate concentration of crime and violence among a relatively small subgroup suggests that changing the behavior of even a small share of the highest-risk youth could generate a notable drop in the overall volume of gun violence.
+</p>
+<p><strong>
+Gang involvement appears to be one characteristic</strong> of this highly criminally involved subset of all youth, particularly in Chicago. What should count as a &#x201c;gang&#x201d; remains the topic of ongoing debate among criminologists and sociologists. But when the United States Department of Justice surveyed arrestees in different cities in 1996&#x2013;97, 20 percent of Chicago arrestees said they were currently in a gang and 45 percent said they had been in a gang at some point. This is a far higher rate than in the median city in the sample, which had 3 percent of arrestees report current gang involvement and 15 percent report lifetime involvement. Los Angeles was the only city that came close to Chicago&#x2019;s level of reported gang activity.[6]
+</p>
+<p>
+In recent years, the Chicago Police Department (CPD) has reported that roughly 45 percent of homicides in Chicago are related to gang altercations or narcotics. The CPD also reports that 90 percent of all homicide offenders and nearly three-quarters of homicide victims have prior arrest records, which suggests that involvement with gangs, drugs, guns, or other illegal activities is associated
+with an increased risk of violence and victimization as well as offending.[7]
+</p>
+<p>
+<strong>
+The sociodemographic and geographic concentration of interpersonal gun violence</strong> in modern America should not be cited or construed to &#x201c;blame the victim.&#x201d; American society has a responsibility to continue to address persistent social inequality and to focus resources on the individuals and neighborhoods most likely to bear the costs of violent crime. It is also important to acknowledge that ending poverty and racism in America is a daunting task that is not likely to be accomplished in the short term. Eliminating street gangs is equally daunting&#x2014;in fact, our University of Chicago colleague Irving Spergel has argued that this might not even be possible.[8]
+</p>
+
+<p><strong>Moreover, no Chicago youth is entirely safe</strong> from the problem of gun violence. The Crime Lab&#x2019;s original data analysis suggests that perhaps as many as one out of every five youths killed by gunfire in Chicago was an innocent bystander and not the intended target of the shooter.[9] Being in the &#x201c;wrong place&#x201d; at the &#x201c;wrong time&#x201d; can be lethal for young people living in some of our city&#x2019;s most dangerous neighborhoods. Yet in using this phrase, we are mindful of former Chicago Public Schools CEOCEOCEO Arne Duncan&#x2019;s comments regarding the 2007 shooting death of Blair Holt on a city bus on his way to his grandmother&#x2019;s house after school. As stated by Arne Duncan, &#x201c;<em>Since when is being on the bus on your way home from school being &#x2018;at the wrong place,
+at the wrong time&#x2019;?&#x201d;</em> That is exactly where he was supposed to be.
+</p>
+<p>
+We must find ways of preventing youth from getting shot while society continues to struggle to address other fundamental social problems. The key question for policy makers then becomes: Why do some people become involved with gun violence while most others, growing up in similar circumstances, do not? Most low-income males growing up in Chicago&#x2019;s most disadvantaged and dangerous neighborhoods never become involved with gun violence. Our research has identified several answers that, taken together, suggest some promising potential areas for policy interventions.
+</p>
+
+<p>
+<img src="/i/report_figure2.png" alt="Prevalance of psychiatric disorders: Detained Chicago youth vs. African American youth ages 18 to 24" style="border:1px #c0c0c0 solid;" /><br />
+<strong>Figure 2:</strong> Prevalence of psychiatric disorders: Detained Chicago youth vs. African American youth ages 18 to 24<br />
+<small>Sources: National Survey of American Life, Northwestern Juvenile Project</small>
+</p>
+
+<p>Mental Health Our analysis of data on 1,646 juvenile detainees randomly sampled at intake at the Cook County Juvenile Temporary Detention Center, collected by the Northwestern Juvenile Project, suggests that the majority of youth involved with the criminal justice system experience at least one psychiatric disorder, rates that are far higher than what we see among nationally representative samples of young African Americans (see figure 2).[10]
+</p>
+
+<p>It is not unreasonable to impose stiff prison penalties on violent felons. Yet every
+Chicagoan would benefit if we could do a better job of identifying and treating mental health problems among young people before these disorders lead to violence.</p>
+
+<p>
+<strong>School Failure</strong><br />
+Our analysis of data from the Northwestern Juvenile Project
+indicates that juvenile detainees are, academically speaking, a troubled population. Standardized vocabulary scores were on average below the fifth percentile based on national norms; that is, the average youth in juvenile detention in Chicago in
+the late 1990s scored lower in reading than 95 percent of all similarly aged youth nationwide. Twenty-six percent of the Chicago youth in juvenile detention reported that they had dropped out or were expelled from school. Forty-eight percent
+reported that their last report card had no better than a &#x201c;D&#x201d; average. A large
+share of detained youth had dropped out of school altogether, and, in fact, gang involvement is thought to help youth fill the void after they have dropped out.[11]
+Nationwide, high school graduation rates have been declining in recent decades, while the labor market rewards to a diploma have been increasing.12 While improving our public schools remains a high priority everywhere, student engagement
+is also necessary for any school to be a success, and it is possible that many youth may not adequately understand the value of schooling for their future. Improving the schooling engagement and outcomes for high-risk youth seems like a particularly important component of any antiviolence strategy, because&#x2014;unlike such after-the-fact strategies as sending juvenile offenders to detention&#x2014;prevention programs
+that improve schooling outcomes have the potential to reduce the burden of
+violence and delinquency to society while at the same time helping, rather than harming, those youth who are at highest risk for violence involvement.
+</p>
+
+<p><strong>Alcohol Use</strong><br /> Media accounts frequently link youth gun violence to the use or
+selling of hard drugs like heroin or cocaine. Yet analysis of data on Chicago homicides
+from the Illinois Violent Death Reporting System found that only 3 percent of victims ages 10 to 24 tested positive for recent cocaine or opiate use.13 In contrast, 35 percent of homicide victims had alcohol in their blood at the time of death, often at levels above legal thresholds defined for alcohol intoxication.
+</p>
+<p>
+One final point, which bears repeating, is the impact that gun availability has particularly when combined with such risk factors for youth violence involvement as mental health problems, alcohol or drug abuse, and school failure or disengagement.
+Europe, Canada, and Australia have many youth who suffer from these same problems, yet their homicide rates are far lower than ours in the United States.
+</p>
+
+<p>
+In the absence of easy gun availability, youth problems in school or with mental health or substance abuse are not nearly as lethal. Guns intensify violence and make violent events more lethal (Zimring, 1968; Cook, 1991; Cook and Ludwig, 2006). The lethality of guns means it is important to try to keep guns away from youth who are engaged in violence as an independent goal, above and beyond trying to reduce youth involvement with violent events.
+</p>
+
+<p><strong>
+With around 250 million guns already in circulation in America</strong> (Cook and Ludwig, 2006), it is not surprising that many people have come to believe that it is impossible to keep guns out of the hands of youth, criminals, and other high-risk people. But our own study of the underground gun market in Chicago suggests that, perhaps surprisingly, conventional wisdom may be overly pessimistic.
+Transaction costs in underground gun markets are substantial: prices are high relative to the legal gun market; wait times are considerable; mistrust is common between buyers and sellers; and many transaction attempts go unfulfilled, even by people who are well-connected in the underground economy (Cook, Ludwig, Venkatesh, and Braga, 2007). The underground market seems to work far less smoothly for guns than for drugs, perhaps in part because guns, unlike drugs, are durable goods, so the number of market transactions is lower and exchange becomes more difficult to manage. These patterns suggest opportunities for enforcement efforts that disrupt the illicit gun market. Measures such as buy-and-bust operations or efforts to incentivize arrestees to provide information about buyers and sellers in the gun market may prove more effective than those directed at illegal drugs.
+</p>
+<p>
+Deterring gun carrying may also help reduce the homicide rate in Chicago above and beyond efforts to prevent gun access in the first place. As noted above, 80 percent of homicides in Chicago in 2008 involved firearms, while CPD data for 2007 suggest that nearly three-quarters of all homicide victims were found outdoors. These figures suggest that in a large share of all homicides the offender must have been carrying a gun in public beforehand. Our analysis of Chicago&#x2019;s underground gun market also suggests that young people, criminally involved young adults, and even drug-selling street gangs respond to police pressure against illegal gun carrying and use.
+While it is certainly true that federal gun policy in the United States is currently suboptimal, our study suggests that there are still several ways in which strategic enforcement pressures can help reduce gun use.
+</p>
+<p>While it is certainly true that federal gun policy in the United States is currently suboptimal, our study suggests that there are still several ways in which strategic enforcement pressures can help reduce gun use.</p>
+<hr />
+
+<h4>When do we lose these youth?<a name="4">&nbsp;</a></h4>
+<p>
+A growing body of evidence suggests that we begin losing children essentially from the day they are born. Psychologists claim that there are income disparities in physical aggression in children as young as 16 months (see, for example, the discussion in Ludwig and Sawhill, 2007). Research from criminology and psychology shows that aggressive or violent behavior, even at very young ages,
+as well as early academic problems, are predictive of violent behavior and other social problems later in life (Reiss and Roth, 1993).
+</p>
+<p>
+A particularly important turning point seems to come around eighth or ninth grade
+for many youth. Arrest rates seem to increase in aggregate data for Chicago and in the nation as a whole around ages 13 or 14.[14] Trying to help support children before they reach this key transition period&#x2014;for example focusing on children as young as age 10 to help them prepare for their upcoming transition&#x2014;may have great value in reducing subsequent rates of youth gun violence.
+At the same time, it is important to recognize that there is an &#x201c;exit&#x201d; as well as
+an &#x201c;enter&#x201d; door into the high-risk life (Blumstein, Cohen, Roth, and Visher, 1986; Moffitt, 1993; Piquero, Farrington, and Blumstein, 2003). Most research in criminology suggests that criminal careers are short: for instance, arrest rates in Chicago and elsewhere for most crimes tend to peak during late adolescence or very early adulthood (early 20s).[15] Most of the youth who become involved with crime and violence during the highest-risk part of their lives are not lost causes, since most will eventually desist from crime. There is great value in considering ways of expediting the rate of exit from high-risk behaviors and circumstances. Conversely, interventions and policies serving juvenile offenders that fail to provide proper support and monitoring or that disrupt positive developmental trajectories can worsen youth violence by slowing this exit rate. We should help young people transition out of their criminal careers throughout the high-risk ages&#x2014;even up through the early 20s.
+</p>
+<hr />
+<h4>What can we do about the youth gun violence problem?<a name="5">&nbsp;</a></h4>
+<p>
+Real progress in reducing youth gun violence requires better efforts to evaluate what our society is doing to address this problem and doing more of what is most effective (and cost-effective). As noted above, homicide rates in the United States were about 20 percent higher in 2005 than in 1950. This pattern stands in marked contrast to the dramatic progress we have made over the past 50 years in reducing death rates from a wide range of illnesses. This adverse trend is especially striking when one considers the marked advances over the same period in public health and emergency medicine that lessen the likelihood that a given violent act will be fatal.
+</p>
+<p>
+One potentially important explanation is that clinical trials are standard in medicine in providing feedback about which interventions are most effective. This is decidedly not the case in violence prevention, where most federal, state, and local governments implement new pilot programs in ways that cannot be rigorously evaluated. As a result, we know remarkably little about how to reduce gun violence and which interventions, among the wide array of plausible candidates, are actually effective. As noted by a blue ribbon panel commissioned by the National Academy of Sciences to assess the problem of gun violence in America:
+</p>
+<blockquote>
+<p>
+Answers to some of the most pressing questions [about gun violence] cannot be addressed. . . . It is simply not known whether it is actually possible to shut down illegal pipelines of guns to criminals, nor the costs of doing so. . . . [Anti-gun] policing programs are widely viewed as effective, but in fact knowledge of whether and how they reduce crime is limited.16
+Our meetings and conversations across Chicago indicate there could be many effective interventions out there already that are reducing the toll of youth gun violence every day. Yet public and private funders have almost no way right now
+to reliably distinguish plausible interventions that work from program models
+that are less effective.
+</p>
+</blockquote>
+
+<p><strong>At the same time, promoting positive youth development</strong> is not as simple as just launching a new program, since many of our city&#x2019;s highest-risk youth do not fully avail themselves of the social or educational services that are already available to them. For some of these youth, problems with mental health or substance abuse might make it difficult to fully engage with existing programs. But our focus group discussions and data analyses also confirm what a growing body of research in behavioral economics suggests: While our social service institutions could surely improve, it appears that the rewards for prosocial behaviors and the costs of antisocial activities are insufficiently salient for too many youth. Prosocial activities&#x2014;like attending school&#x2014;confront teenagers with tangible and immediate costs, while the benefits are deferred and abstract. Chicago&#x2019;s new Green for Grades program, which provides cash rewards for academic achievement in several Chicago high schools, represents one creative attempt to make the benefits of schooling more swift, certain, and salient to students. Much more might be done along these lines, including efforts that take better advantage of the leverage that the criminal justice system currently has over many high-risk youth to compel schooling, work, and treatment.
+</p>
+<p>
+We also miss many opportunities to prevent youth gun violence by deterring youth from participating in high-risk activities. Research suggests people are more responsive to swifter and more certain punishment than to more severe punishment. Our existing criminal justice practices too often run exactly counter to this principle: Youths often are not punished when they engage in risky behaviors, like illegal gun possession or carrying, until they cross over some line that seems clear to government officials but not to the youths themselves. At that point very harsh penalties are imposed that are quite costly to both the young person and to the entire society. We would do society as a whole and the youth themselves a favor by making far greater use of swifter, less severe punishments for infractions like gun carrying, including intermediate sanctions
+like community service or more stringent probation conditions.
+</p>
+<p>
+Clearly youth gun violence is a serious and persistent challenge in Chicago and other cities across the United States. The deep costs and tragic consequences, while not shared evenly, are spread broadly in society. Victims are not the only victims. What we hope this report also makes clear is that while society continues to work on the &#x201c;root causes&#x201d; of gun violence, such as poverty, there are promising and often overlooked points of intervention that could help reduce the toll of youth gun violence in the near term. But to know whether or not new strategies are working, we must also begin to take evidence in this area as seriously as it is taken in medicine.
+</p>
+<p>
+<strong>The overall vision of the University of Chicago Crime Lab</strong> is to conduct and
+rigorously evaluate&#x2014;first in Chicago and eventually nationwide&#x2014;promising pilot programs to reduce the toll that crime and violence impose on American society every year. This accumulated set of evaluation evidence will help cities learn from one another about what are the &#x201c;best practices&#x201d; for reducing the social costs
+of crime and violence. Chicago has the potential to become a world leader in
+addressing these problems.
+</p>
+
+<hr />
+
+<h5>Notes</h5>
+<p>
+1. <a name="note1">&nbsp;</a> These figures are from Chicago Police Department, Research and Development, Crime Summary (January 2009).
+</p>
+<p>
+2. <a name="note2">&nbsp;</a> This is not to say that dramatic progress has been made in reducing mortality rates from all disease-related causes. For example, death rates from malignant neoplasms (cancer) have held fairly steady, equal to 194 per 100,000 in 1950, compared to 184 per 100,000 in 2005. Nevertheless the overall all-cause, age-adjusted mortality rate in the United States, which is dominated by disease deaths (compared to injury deaths), has declined dramatically, from 1,446 per 100,000 in 1950 to 799 per 100,000 in 2005. Even suicide rates have shown a long-term decline, equal to 13.2 per 100,000 in 1950, compared to 10.9 per 100,000 in 2005, perhaps in part due to the introduction of increasingly effective antidepressant drugs (Ludwig, Marcotte, and Norberg, 2007). Mortality figures reported in the text come from the NCHNCHNCHS report Health, United States, 2007 (table 29) and infoplease.com/ipa/A0779935.html (downloaded December 27, 2008.)
+</p>
+<p>
+3. <a name="note3">&nbsp;</a> In 2008, there were 412 gun homicides in the City of Chicago. Figures for the numbers of gun homicides for the years 1999 through 2007 come from the Chicago Police Department&#x2019;s &#x201c;2006&#x2013;2007 Murder Analysis in Chicago&#x201d; (https://portal.chicagopolice.org/portal/page/portal/ClearPath/News/Statistical%20Reports/Homicide%20Reports/2006%20-%202007%20Homicide%20Reports/06-07_MA.pdf). If we look at the past five years rather than the past 10 years, Chicago averages 360 gun homicides per year. Analyses by Crime Lab team member Philip Cook of Duke University indicate that the likelihood that an assault-related gunshot wound results in the death of the victim is about one in six, so that for each gun homicide we observe in a city, on average we expect there to be an additional five nonfatal firearm assaults (Cook, 1985). Our estimate for the social costs per crime-related gunshot wound comes from contingent valuation survey estimates for what the American public would be willing to pay to reduce the number of such shootings by 30 percent, taken from Cook and Ludwig (2000). One limitation for present purposes is that these are national figures, and in principle the public&#x2019;s willingness to pay to reduce gun violence might be different in Chicago compared to the United States as a whole. Another important caveat is that the public&#x2019;s willingness to pay to avert gun violence may not be proportional to the change in the number of shootings (so that, for example, the value of eliminating gun violence altogether need not be 3.33 times the value of reducing gun violence by 30 percent). With these qualifications in mind, our estimates suggest that over the previous 10 years Chicago would average about 420 x 6 = 2,500 crime-related shootings per year, so that the total social cost of gun violence to the city would be on the order of 2,500 x $1 million = $2.5 billion.
+</p>
+<p>
+4 <a name="note4">&nbsp;</a> The most detailed data on Chicago homicides are drawn from the 448 reported cases occurring in 2005, including 190 cases in which the victims were between the ages of 10 and 24. We examined these cases closely using data from the Illinois Violent Death Reporting System (IVDRS). IVDRS links data from the Cook County Medical Examiner&#x2019;s Office, Illinois Department of Public Health, and Chicago Police Department to create the most detailed available picture of these homicides. Ninety percent of these young homicide victims were male. More than 90 percent were African American or Hispanic/Latino. African Americans comprised 36 percent of Chicago residents and 67 percent of young homicide victims. These figures reflect the disproportionate toll violence takes on African American youth, who across the United States face seven times the homicide rate experienced by non-Hispanic whites.
+</p>
+<p>
+5. <a name="note5">&nbsp;</a> According to the 2000 Census, Hispanic/Latino residents comprised 26 percent of the Chicago population. By 2005, Hispanic/Latino youth were likely a higher percentage of Chicago residents in their age group. That same year, 25 percent of young Chicago homicide victims were identified as Hispanic/Latino. Although Hispanic/Latino youth are not &#x201c;overrepresented&#x201d; overall in Chicago&#x2019;s youth homicide statistics, segments of the Hispanic/Latino community clearly experience high rates of homicide and interpersonal violence that require police response. In contrast to recent claims about the role that immigrants play in escalating violence, 88 percent of these homicide victims were United States born.
+</p>
+<p>
+6. <a name="note6">&nbsp;</a> The United States Department of Justice survey from which these results are drawn is called the Drug Use Forecasting system; these results are taken from Cook, Ludwig, Venkatesh, and Braga (2007, table 4, p. F577). As we note in the text, in Chicago 20 percent of arrestees in 1996&#x2013;97 said they were currently in a gang, and 45 percent said they had been in a gang at some point in their lifetimes. Among arrestees in Los Angeles, 19 percent said they were currently in a gang and 34 percent said they had ever been in a gang. The city with the next-highest reported level of gang involvement among arrestees was Birmingham, where 11 percent of arrestees were in a gang currently and 20 percent had ever been in a gang. The median city in the sample had around 3 percent of arrestees report current gang involvement and around 15 percent say they had ever been in a gang.
+</p>
+<p>
+7 <a name="note7">&nbsp;</a> These figures are taken from the CPD&#x2019;s &#x201c;2006&#x2013;2007 Murder Analysis in Chicago.&#x201d;</p>
+<p>
+8. <a name="note8">&nbsp;</a> University of Chicago Magazine, August 1995, &#x201c;Attack on All Fronts.&#x201d; magazine.uchicago.edu/9508/August95Investig.html.
+</p>
+<p>
+9. <a name="note9">&nbsp;</a> For this report, University of Chicago student Garrett Brinker systematically reviewed web/media accounts of every available homicide in which the victim was a Chicago youth between 13 and 18 years of age between September 11, 2006, and September 6, 2008. This analysis reviewed all stories in the Chicago Tribune, the Chicago Sun-Times, and CBS News. Not every known murder was covered in these news outlets. However, news stories covered murders of 73 youth. Sixty-two of these homicides involved a firearm. One-fifth of these cases (15/73) involved an unintended victim caught in crossfire, killed by a stray bullet, or a victim killed within a crowd into which shots were apparently fired indiscriminately.
+</p>
+<p>
+10. <a name="note10">&nbsp;</a> To place the prevalence estimates for mental health problems among juvenile detainees in context, in figure 2 we compared these to estimates derived from the National Survey of American Life (NSAL). NSAL is an extensive epidemiological study, which oversampled African American respondents. Because NSAL respondents are all over age 18, we examined lifetime prevalences of psychiatric disorders among African American respondents age 18 to 24. Because lifetime prevalence rates (which is what we have for the national sample) are always higher than prevalence rates estimated for shorter periods of time (such as the six-month prevalence rates we estimate for juvenile detainees in Cook County), our comparisons shown in figure 2 will if anything understate the degree to which juvenile detainees have higher rates of mental health problems than national samples of youth.
+</p>
+<p>
+11. <a name="note11">&nbap;</a> University of Chicago Magazine, August 1995. &#x201c;Attack on All Fronts.&#x201d;
+</p>
+<p>
+12. <a name="note12">&nbsp;</a> Allensworth and Easton (2001) estimate that the high school dropout rate among CPS students is 44 percent, while Heckman and LaFontaine (2007) show that nationwide the high school graduation rate has been declining over the past 40 years and has not converged at all between whites and minorities. Goldin and Katz (2007) show that the wage premium to high school graduates versus dropouts was substantially higher in 2005 than in 1980 (despite a small dip from 2000 to 2005).
+</p>
+<p>
+13. <a name="note13">&nbsp;</a> Medical examiners did not routinely test for the presence of marijuana, which would have likely proved more prevalent than other illicit drugs.
+</p>
+<p>
+14. <a name="note14">&nbsp;</a> For example nationwide in 2006, the number of people arrested for murder (or all FBI Index 1 violent crimes) were: 0 (515) for people under 10; 9 (4,602) for those ages 10 to 12; 72 (16,308) for those ages 13 to 14; 146 (14,584) for those 15 years of age; 287 (18,215) for 16-year-olds; 442 (19,767) for 17-year-olds; 667 (21,683) for 18-year-olds; 649 (20,607) for 19-year-olds; 636 (19,054) for 20-year-olds; and 538 (18,537) for 21-year-olds. See the Sourcebook of Criminal Justice Statistics Online, albany.edu/sourcebook/pdf/t472006.pdf, table 4.7.2006.
+</p>
+<p>
+15. <a name="note15">&nbsp;</a> See for example the Chicago Police Department&#x2019;s 2007 Annual Report.
+</p>
+<p>
+16. <a name="note16">&nbsp;</a> Wellford, Pepper, and Petrie (2004), pp. 2, 6, 8, 10.
+</p>
+
+<hr />
+
+<h5>References</h5>
+<p>
+Allensworth, E., and Easton, J. Q. (2001). Calculating a cohort dropout rate for the Chicago Public
+Schools: A technical research report. Chicago: Consortium on Chicago School Research.
+</p>
+<p>
+Blumstein, A., Cohen, J., Roth, J. A., and Visher, C. A., eds. (1986). Criminal careers and &#x201c;career criminals,&#x201d; vol. 2. Washington, DC: National Academies Press.
+</p>
+<p>
+Cook, P. J. (1985). The case of the missing victims: Gunshot woundings in the National Crime Survey.
+Journal of Quantitative Criminology 1(1): 91&#x2013;102.
+</p>
+<p>
+Cook, P. J. (1991). The technology of personal violence. In M. Tonry (ed.), Crime and justice: An annual
+review of research, pp. 1&#x2013;71. Chicago: University of Chicago Press.
+</p>
+<p>
+Cook, P. J., and Ludwig, J. (2000). Gun violence: The real costs. New York: Oxford University Press.
+</p>
+<p>
+Cook, P. J., and Ludwig, J. (2006). The social costs of gun ownership. Journal of Public Economics
+90(1&#x2013;2): 379&#x2013;391.</p>
+<p>
+Cook, P. J., Ludwig, J., Venkatesh, S. A., and Braga, A. A. (2007). Underground gun markets. The Economic Journal 117(November): F558&#x2013;F588.
+</p>
+<p>
+Cullen, J. B., and Levitt, S. D. (1999). Crime, urban flight, and the consequences for cities. Review of
+Economics and Statistics 81(2): 159&#x2013;169.</p>
+<p>
+Goldin, C., and Katz, L. F. (2007). Long-run changes in the U.S. wage structure: Narrowing, widening, polarizing. Cambridge, MA: National Bureau of Economic Research Working Paper No. 13568.
+Greenbaum, R., and Tita, G. (2004). The impact of violence surges on neighborhood business activity.
+Urban Studies 41(13): 2495&#x2013;2514.
+</p>
+<p>
+Hamermesh, D. S. (1999). Crime and the timing of work. Journal of Urban Economics 45(2): 311&#x2013;330.
+Heckman, J. J., and LaFontaine, P. A. (2007). The American high school graduation rate: Trends and levels. Cambridge, MA: National Bureau of Economic Research Working Paper No. 13670.
+</p>
+<p>
+Ludwig, J., and Cook, P. J. (2001). The benefits of reducing gun violence: Evidence from contingent-valuation survey data. Journal of Risk and Uncertainty 22(3): 207&#x2013;226.
+</p>
+<p>
+Ludwig, J., Marcotte, D. E., and Norberg, K. (2007). Anti-depressants and suicide. Cambridge, MA:
+National Bureau of Economic Research.
+</p>
+<p>
+Ludwig, J., and Sawhill, I. (2007). Success by ten: Intervening early, often, and effectively in the education
+of young children. Brookings Institution, Hamilton Project Discussion Paper.
+</p>
+<p>
+Moffitt, T. E. (1993). Adolescent-limited and life-course-persistent antisocial behavior: A developmental taxonomy. Psychological Review 100(4): 674&#x2013;701.
+</p>
+<p>
+Piquero, A. R., Farrington, D. P., and Blumstein, A. (2003). The criminal career paradigm. Crime and Justice
+30: 359&#x2013;506.
+</p>
+<p>
+Reiss, A. J., and Roth, J. A. (1993). Understanding and preventing violence. Washington, DC: National Academies Press.
+</p>
+<p>
+Tracy, P. E., Wolfgang, M., and Figlio, R. M. (1990). Delinquency careers in two birth cohorts. New York:
+Plenum Press.
+</p>
+<p>
+Wellford, C., Pepper, J., and Petrie, C. (2004). Firearm violence: A critical review, pp. 2, 6, 8, 10. Washington, DC: National Academies Press.
+</p>
+<p>
+Zimring, F. E. (1968). Is gun control likely to reduce violent killings? University of Chicago Law Review 35: 21&#x2013;37.
+</p>
+
+<hr />
+<h5>Acknowledgements</h5>
+<p>
+The University of Chicago Crime Lab is supported by generous grant awards
+from the Joyce Foundation, the Provost&#x2019;s Office of the University of Chicago,
+and the University of Chicago School of Social Service Administration through
+the Center for Health Administration Studies. The focus groups reported on here were skillfully conducted by Jessica Darrow, Jack Lesniewski, and Desmond Patton, while Sabrina Yusuf and Garrett Brinker provided additional excellent research assistance. Analysis of data from the Illinois Violent Death Reporting System, was made possible through the generous cooperation of Jennifer Cartland and Kathleen Monahan. Analysis of data from the Northwestern Juvenile Project was made possible through the generous assistance of Professor Linda Teplin of Northwestern University. For helpful discussions and/or assistance with data we are grateful to the Office of the Mayor, Chicago Public Schools, Chicago Police Department, Chicago Department of Children and Youth Services, Chicago Commission on Human Relations, and Chapin Hall at the University of Chicago. We are especially grateful and humbled by all the Chicago residents who generously shared their time providing us their perspectives on the youth gun violence problem as part of our project&#x2019;s focus groups and interviews.
+</p>
+
+<!-- /com.omniupdate.div -->
+</div>
+<br class="clr" />
+</div>
+<div id="clearfoot">&nbsp;</div>
+</div>
+<!-- footer begins here -->
+<div id="footerwrapper">
+<div id="footer">
+<!-- com.omniupdate.div label="footer" path="/ssi/template/footer.shtml" -->
+<p><a id="copylink" href="#">©</a> 2011<a href="http://www.uchicago.edu/">The University of Chicago</a><br /><a href="/">Crime Lab<br /></a>Homepage photo by <a href="http://flickr.com/photos/fiahless/438708411/">Felix Petersen</a><a href="http://www.flickr.com/photos/docsearls/2514718670/"> </a></p>
+<p><span class="style2">55 East Monroe 30th Floor</span><br />Chicago, IL 60603<br /><span class="style2">312.759.4291&nbsp;</span></p>
+
+<!-- /com.omniupdate.div -->
+</div>
+</div>
+<!-- com.omniupdate.div label="scripts" path="/ssi/template/scripts.htm" -->
+<script src="http://www.uchicago.edu/js/prototype.js" type="text/javascript"></script>
+<script src="http://www.uchicago.edu/js/scriptaculous.js" type="text/javascript"></script>
+<script src="http://www.uchicago.edu/js/global.js" type="text/javascript"></script>
+<script src="http://www.uchicago.edu/js/sifr-config.js" type="text/javascript"></script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8206811-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<!-- /com.omniupdate.div -->
+<!-- com.omniupdate.button --><div id="hide"><a id="ouhook" href="http://www.omniupdate.com/oucampus-uchicago/de.jsp?user=Crimelab&amp;site=Crimelab&amp;path=%2Fgun_violence%2Freport.shtml"><img src="/px.gif" width="1" height="1" alt="#" /></a></div><!-- /com.omniupdate.button --></body>
+</html>

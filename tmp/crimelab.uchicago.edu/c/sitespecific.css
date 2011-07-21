@@ -1,0 +1,76 @@
+a#dept_title {
+background:transparent url(/i/template/masthead.gif) no-repeat scroll 0 0;
+display:block;
+height:53px;
+text-decoration:none;
+width:508px;
+}
+
+#mainfeature {
+background:transparent url(/i/features/photo.jpg) no-repeat scroll 0 0;
+}
+
+#mainfeature h3 {
+background:transparent url(/i/features/headline.gif) no-repeat scroll 0 0;
+top:130px;
+z-index:2;
+height:50px !important;
+margin:0 0 0 312px;
+}
+
+
+#mainfeature p
+{
+	margin: -40px 0 66px 469px;
+	z-index: 3;
+}
+
+body#people div#content p img {
+	margin: 5px 0px 5px 10px;
+       background-color:#fff;
+       padding:3px;
+       border:1px solid #8F8E86;
+}
+
+
+
+body.lo5 div#content ol {
+       width:390px;
+       padding:5px 30px 5px 30px !important;
+       margin:0px;
+ }
+
+blockquote {
+
+background-color:#fff;
+width:410px;
+border-left:4px #EAE9E1 solid;
+}
+div#content blockquote p {
+       width:390px !important;
+	padding:10px;
+}
+
+
+/*=================================
+= Natalia's additions: 11/21/2008 =
+===================================*/
+
+/* stop tables from breaking layout */
+body.lo5 div#content table td p {
+width:auto;
+font-size:.9em; }
+
+body.lo5 div#content table {width:450px;}
+
+
+/* stop hrs from breaking layout */
+body.lo5 div#content hr {
+	width:450px;
+}
+
+hr {
+	clear:none;
+}
+
+
