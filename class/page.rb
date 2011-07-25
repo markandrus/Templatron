@@ -1,5 +1,22 @@
 #! /usr/local/bin/ruby
 
+# There are already entries in the Drupal database, so we need to set the correct id offset
+$lastNodeId = 100
+$lastMenuLinkId = 600
+$lastUrlAliasId = 100
+def getLastNodeId()
+	$lastNodeId += 1
+	return $lastNodeId - 1
+end
+def getLastMenuLinkId()
+	$lastMenuLinkId += 1
+	return $lastMenuLinkId - 1
+end
+def getLastUrlAliasId()
+	$lastUrlAliasId += 1
+	return $lastUrlAliasId - 1
+end
+
 class Page
     # A WebExpress Page maps to a number of different Drupal tables:
     #     - url_alias
@@ -7,39 +24,38 @@ class Page
     #     - node
     #     - field_data_body
 	#     - node_access
-    attr_accessor :id, :title, :node, :menuLink, :urlAlias, :fieldDataBody, :nodeAccess
-
-	# There are already entries in the Drupal database, so we need to set the correct id offset
-	def getLastNodeId()
-		return 50
-	end
-	def getLastMenuLinkId()
-		return 500
-	end
-	def getLastUrlAliasId()
-		return 50
-	end
+    attr_accessor :id, :children, :title, :node, :menuLink, :urlAlias, :fieldDataBody, :nodeAccess
 
     # Construct the necessary database objects
-    def initialize(title, content, path)
+    def initialize(title, content, path, children)
         @title = title
-        @id = getLastNodeId() + 1
+        @id = getLastNodeId()
         @node = Node.new(@id, 'page', @title)
-        menuLinkId = getLastMenuLinkId() + 1
-        @menuLink = MenuLink.new(menuLinkId, 0, @title, @id, 0, 0, 1)
+        menuLinkId = getLastMenuLinkId()
+		@children = children
+        @menuLink = MenuLink.new(menuLinkId, 0, @title, @id, !@children.empty?, 0, 1)
+		i = 0;
+		@children.each do |child|
+			if !child.nil? then
+				child.menuLink.parentId = menuLinkId
+				child.menuLink.depth += 1
+				child.menuLink.weight = -50 + i
+				i += 1
+			end
+		end
         @fieldDataBody = FieldDataBody.new(@id, 'page', content)
-		urlAliasId = getLastUrlAliasId() + 1
-		@urlAlias = UrlAlias.new(urlAliasId(), @id, path)
+		urlAliasId = getLastUrlAliasId()
+		@urlAlias = UrlAlias.new(urlAliasId, @id, path)
 		@nodeAccess = NodeAccess.new(@id)
     end
 
     # Returns SQL
     def to_s
-        return node.to_s + "\n"
-		     + menuLink.to_s + "\n"
-			 + fieldDataBody.to_s + "\n"
-			 + urlAlias.to_s + "\n"
-			 + nodeAccess.to_s + "\n"
+		childrenSql = ''
+		@children.each do |child|
+			childrenSql += child.to_s + "\n"
+		end
+        return node.to_s + "\n" + menuLink.to_s + "\n" + fieldDataBody.to_s + "\n" + urlAlias.to_s + "\n" + nodeAccess.to_s + "\n" + childrenSql
     end
 end
 

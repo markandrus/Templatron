@@ -3,7 +3,7 @@
 class UrlAlias
     attr_accessor :id, :node, :linkPath
     def initialize(id, node, linkPath)
-        @id = id; @node = node; @linkPath = linkPath
+        @id = id; @node = node; @linkPath = linkPath.sub(/^\//, '').sub(/\/$/, '')
     end
     # Returns SQL
     def to_s

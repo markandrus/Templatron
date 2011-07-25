@@ -7,7 +7,7 @@ class FieldDataBody
     end
     # Returns SQL
     def to_s
-		return 'INSERT INTO `field_data_body` VALUES (' + ([
+		return ('INSERT INTO `field_data_body` VALUES (' + ([
 			'node',
 			@bundle,
 			'0',
@@ -15,8 +15,21 @@ class FieldDataBody
 			@id.to_s,
 			'und',
 			'0',
-			@bodyValue
-		].map {|x| "'" + x + "'"}).join(', ') + ');';
+			@bodyValue,
+			'',
+			'filtered_html'
+		].map {|x| "'" + x + "'"}).join(', ') + ');' + 'INSERT INTO `field_revision_body` VALUES (' + ([
+			'node',
+			@bundle,
+			'0',
+			@id.to_s,
+			@id.to_s,
+			'und',
+			'0',
+			@bodyValue,
+			'',
+			'filtered_html'
+		].map {|x| "'" + x + "'"}).join(', ') + ');');
     end
 end
 
