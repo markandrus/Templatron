@@ -1,6 +1,8 @@
 #! /usr/local/bin/ruby
 
 # There are already entries in the Drupal database, so we need to set the correct id offset
+# NOTE: The last* values I chose are arbitrary, but should be large enough not to collide with
+#		anything in the Drupal database
 $lastNodeId = 100
 $lastMenuLinkId = 600
 $lastUrlAliasId = 100
