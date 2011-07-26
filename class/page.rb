@@ -26,7 +26,7 @@ class Page
     #     - node
     #     - field_data_body
 	#     - node_access
-    attr_accessor :id, :children, :title, :node, :menuLink, :urlAlias, :fieldDataBody, :nodeAccess
+    attr_accessor :id, :children, :title, :node, :menuLink, :urlAlias, :fieldDataBody, :nodeAccess, :newUrlAlias
 
     # Construct the necessary database objects
     def initialize(title, content, path, children)
@@ -37,8 +37,8 @@ class Page
 		@children = children
         @menuLink = MenuLink.new(menuLinkId, 0, @title, @id, !@children.empty?, 0, 1)
 		i = 0;
-		@children.each do |child|
-			if !child.nil? then
+		if !@children.nil? && !@children.empty? then
+			@children.each do |child|
 				child.menuLink.parentId = menuLinkId
 				child.menuLink.depth += 1
 				child.menuLink.weight = -50 + i
@@ -57,7 +57,7 @@ class Page
 		@children.each do |child|
 			childrenSql += child.to_s + "\n"
 		end
-        return node.to_s + "\n" + menuLink.to_s + "\n" + fieldDataBody.to_s + "\n" + urlAlias.to_s + "\n" + nodeAccess.to_s + "\n" + childrenSql
+        return node.to_s + "\n" + menuLink.to_s + "\n" + fieldDataBody.to_s + "\n" + urlAlias.to_s + "\n" + nodeAccess.to_s + "\n" + childrenSql + "\n" + newUrlAlias.to_s
     end
 end
 
