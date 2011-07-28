@@ -57,7 +57,7 @@ class Page
 		@children.each do |child|
 			childrenSql += child.to_s + "\n"
 		end
-        return node.to_s + "\n" + menuLink.to_s + "\n" + fieldDataBody.to_s + "\n" + urlAlias.to_s + "\n" + nodeAccess.to_s + "\n" + childrenSql + "\n" + newUrlAlias.to_s
+        return node.to_s + "\n" + menuLink.to_s + "\n" + fieldDataBody.to_s + "\n" + newUrlAlias.to_s + "\n" + urlAlias.to_s + "\n" + nodeAccess.to_s + "\n" + childrenSql + "\n"
     end
 end
 
