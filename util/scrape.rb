@@ -9,42 +9,38 @@ def unicode_to_html(str)
 end
 
 def quote_string(v)
-	# v.to_s.gsub(/\\/, '\&\&').gsub(/'/, "\'")
-=begin
-	v.to_s.gsub("\0", '\0'
-		 ).gsub(/'/, '\''
-		 ).gsub(/"/, '\"'
-		 ).gsub("\b", '\b'
-		 ).gsub("\n", '\n'
-		 ).gsub("\r", '\r'
-		 ).gsub("\t", '\t'
-		 ).gsub("\Z", '\Z'
-		 ).gsub('\', '\\'
-		 ).gsub('%', '\%'
-		 ).gsub('_', '\_'
-		 )
-=end
-	unicode_to_html(v.to_s.gsub(/\\/, "\\"+"\\").gsub(/'/, "''").gsub(/\n/, "\\n").gsub(/\t/, "\\t"))
-	# Mysql.escape_string(v)
+	v.to_s.gsub(/\\/, "\\"+"\\").gsub(/'/, "''").gsub(/\n/, '').gsub(/\t/, "\\t")
+end
+
+def transformHeaders(doc)
+	doc.css('h5').each { |h| h.name = 'h6' }
+	doc.css('h4').each { |h| h.name = 'h5' }
+	doc.css('h3').each { |h| h.name = 'h4' }
+	doc.css('h2').each { |h| h.name = 'h3' }
+	doc.css('h1').each { |h| h.name = 'h2' }
+end
+
+def deleteMisc(doc)
+	doc.css('a#maincontent + h2').each { |h| h.remove }
+	doc.css('a#maincontent').each { |a| a.remove }
+	doc.css('div.imgrt').each { |div| div.remove }
+end
+
+def deleteComments(doc)
+	doc.xpath('//comment()').each { |comment| comment.remove }
 end
 
 # Collect HTML from `div#content div#bottomrow div#col1' or `div#content',
 # Exclude `div.imgrt'
 # Transform h5 to h6, h4 to h5, h3 to h4, etc.
 def scrape(filePath)
+	# Clean up the file
 	doc = Nokogiri::HTML.parse(File.read(filePath))
+	deleteComments(doc)
+	deleteMisc(doc)
+	transformHeaders(doc)
+	# Aggregate content
 	content = ''
-	doc.css('h5').each { |h| h.name = 'h6' }
-	doc.css('h4').each { |h| h.name = 'h5' }
-	doc.css('h3').each { |h| h.name = 'h4' }
-	doc.css('h2').each { |h| h.name = 'h3' }
-	doc.css('h1').each { |h| h.name = 'h2' }
-	doc.css('a#maincontent').each do |a|
-		a.remove
-	end
-	doc.css('div.imgrt').each do |div|
-		div.remove
-	end
 	doc.css('div#content div#bottomrow div#col1').each do |div|
 		content += div.inner_html
 	end
@@ -53,7 +49,7 @@ def scrape(filePath)
 			content += div.inner_html
 		end
 	end
-	content.gsub!(/<!--[ \r\n\t]*.*[ \r\n\t]*-->/, '')
-	return quote_string(content)
+	# Prepare for SQL
+	return quote_string(unicode_to_html(content))
 end
 

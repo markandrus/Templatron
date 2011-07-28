@@ -4,17 +4,16 @@ require 'rubygems'
 require 'RMagick'
 include Magick
 
-def makeMasthead(title, outputGif)
+def makeMasthead(title, outputPng)
+	title.strip!
 	text = Draw.new
 	text.font = 'Gotham-Rounded-Light'
 	text.pointsize = 28 
 	text.gravity = SouthWestGravity
-	hdr = ImageList.new
-	hdr.new_image(650, 53, GradientFill.new(0, 0, 0, 0, '#7c0000', '#7c0000'))
-	hdr.transparent_color = '#7c0000'
+	hdr = Image.new(650, 53) { self.background_color = 'none' }
 	text.annotate(hdr, 0, 0, 0, 0, title) {
 		self.fill = 'white'
 	}
-	hdr.transparent('#7c0000').write(outputGif)
+	hdr.write(outputPng)
 end
 
