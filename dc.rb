@@ -2,6 +2,8 @@
 
 require 'rubygems'
 require 'nokogiri'
+require 'highline/import'
+
 require 'class/page.rb'
 require 'class/node.rb'
 require 'class/menuLink.rb'
@@ -9,35 +11,20 @@ require 'class/fieldDataBody.rb'
 require 'class/urlAlias.rb'
 require 'class/nodeAccess.rb'
 require 'class/link.rb'
-require 'util/usage.rb'
+require 'util/misc.rb'
 require 'util/scrape.rb'
-require 'util/procUrl.rb'
-require 'util/makeMasthead.rb'
 require 'util/transforms.rb'
-require 'util/wget.rb'
-require 'util/sftp.rb'
-require 'util/fixUrl.rb'
+require 'util/makeMasthead.rb'
 
 # Validate arguments & print usage
-if ARGV[0].nil? || ARGV[0].strip! == ''
-	usage()
-	exit
-end
+if ARGV[0].nil? || ARGV[0].strip! == '' then usage() & exit end
 
 domain = ARGV[0]
 tmp = 'tmp/'
 wgetSite(domain, tmp)
 tmpDir = './' + tmp + domain + '/'
-found = `find ./#{tmp + domain} -name index.html`
-
-# Download the entire target Web Express site using `wget'
-webExpressUrl = ARGV[0]
-wgetDir = 'tmp/'
-wgetSite(domain, 'tmp/')
-
-# NOTE: Assumes BSD version of `find'!
-sitePath = './' + wgetDir + webExpressUrl + '/'
-htmlDocs = (`find #{sitePath.sub(/\/$/, '')} -name index.html`).lines.sort do |a, b|
+# NOTE: Assumes BSD version of `find'
+htmlDocs = (`find #{tmp + domain} -name index.html`).lines.sort do |a, b|
 	a.split('/').length <=> b.split('/').length
 end
 
@@ -47,10 +34,7 @@ def buildLinkPool(file, tmpDir, selector, domain)
 	doc.css(selector).each do |a|
 		href = procUrl(a['href'].strip, domain)
 		title = escape_apos(a.content.strip)
-		# filePath = tmpDir + href + (File.directory?(tmpDir + href) ? 'index.html' : '')
-		puts '>>' + href
 		filePath = fixUrl(href, domain, tmpDir)
-		puts '>>>>' + filePath.to_s
 		if !File.file?(filePath) then filePath = '/dev/null' end
 		linkPool.push Link.new(title, href, filePath, [])
 	end
@@ -80,10 +64,8 @@ childPool.each do |child|
 	end
 end
 
-puts ""
-
 # Process Site Title
-siteTitle = ask("Site Title: ")
+siteTitle = ask("\nSite Title: ")
 print "Generating Masthead Image... "
 makeMasthead(siteTitle, 'out/' + domain + '/masthead.png')
 puts "out/" + domain + "/masthead.png\n\n"
@@ -96,7 +78,7 @@ puts "\tNOTE: The original URLs will also work on the TemplaTron site.\n\n"
 # Transform linkPool, and write SQL to file
 outputSql = to_sql(links)
 File.open('out/' + domain + '/db.sql', 'w') { |f| f.write(outputSql) }
-puts "Output saved to `#{'out/' + domain + '/'}'."
+puts "\nOutput saved to `#{'out/' + domain + '/'}'."
 
 # Copy files to server
 sftp('andrus', domain, 'webspace.uchicago.edu')

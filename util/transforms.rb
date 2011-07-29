@@ -2,6 +2,8 @@
 
 require 'highline/import'
 
+$aliasPool = []
+
 # Build "New" UrlAlias with input from user
 def newUrlAlias(linkText, linkPath, hasParent)
 	str = ''
@@ -11,7 +13,14 @@ def newUrlAlias(linkText, linkPath, hasParent)
 	if linkPath != '/' && (linkPath.length < 6 || (linkPath[0, 6] != 'http:/' && linkPath[0, 6] != 'https:')) then
 		newLink = String.new(linkPath).split('/')
 		if !newLink.nil? && !newLink.last.nil? then newLink = newLink.last.gsub(/\.shtml/, '') else newLink = '' end
-		url = ask(str + '> ') { |q| q.default = newLink != '' ? 'page/' + newLink : '' }
+		url = nil
+		while !$aliasPool.index(url).nil? || url.nil?
+			if !url.nil?
+				puts "\n" + str + "ERROR: That URL alias is already in use. Please provide another"
+			end
+			url = ask(str + '> ') { |q| q.default = newLink != '' ? 'page/' + newLink : '' }
+		end
+		if url != '!!' then $aliasPool.push(url) end
 	else
 		url = linkPath
 	end

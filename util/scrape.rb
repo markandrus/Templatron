@@ -2,7 +2,6 @@
 
 require 'rubygems'
 require 'nokogiri'
-require 'mysql'
 
 def unicode_to_html(str)
 	str.unpack("U*").collect {|s| (s > 127 ? "&##{s};" : s.chr) }.join("")
