@@ -8,6 +8,7 @@ require 'class/page.rb'
 require 'class/node.rb'
 require 'class/menuLink.rb'
 require 'class/fieldDataBody.rb'
+require 'class/fieldDataRightImage.rb'
 require 'class/urlAlias.rb'
 require 'class/nodeAccess.rb'
 require 'class/link.rb'
@@ -58,6 +59,19 @@ puts "\tNOTE: The original URLs will also work on the TemplaTron site.\n\n"
 outputSql = to_sql(links)
 File.open('out/' + domain + '/db.sql', 'w') { |f| f.write(outputSql) }
 puts "\nOutput saved to `#{'out/' + domain + '/'}'."
+
+# These images will be moved to the server
+mkdirCmd = "mkdir ./out/#{domain}/img 1>/dev/null 2>/dev/null"
+`#{mkdirCmd}`
+mkdirCmd = "mkdir ./out/#{domain}/img/resize 1>/dev/null 2>/dev/null"
+`#{mkdirCmd}`
+$imgPool.each do |imgHash|
+	puts imgHash['filePath']
+	mvCmd = "mv #{tmpDir + imgHash['filePath'].gsub(' ', '\ ')} ./out/#{domain}/img/#{imgHash['fileName'].gsub(' ', '\ ')} 1>/dev/null 2>/dev/null"
+	`#{mvCmd}`
+	convCmd = "convert -resize 218 ./out/#{domain}/img/#{imgHash['fileName'].gsub(' ', '\ ')} ./out/#{domain}/img/resize/#{imgHash['fileName'].gsub(' ', '\ ')} 1>/dev/null 2>/dev/null"
+	`#{convCmd}`
+end
 
 # Copy files to server
 sftp('andrus', domain, 'webspace.uchicago.edu')

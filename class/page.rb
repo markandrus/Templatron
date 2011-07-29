@@ -26,10 +26,10 @@ class Page
     #     - node
     #     - field_data_body
 	#     - node_access
-    attr_accessor :id, :children, :title, :node, :menuLink, :urlAlias, :fieldDataBody, :nodeAccess, :newUrlAlias, :initPath, :isPseudo
+    attr_accessor :id, :children, :title, :node, :menuLink, :urlAlias, :fieldDataBody, :fieldDataRightImage, :nodeAccess, :newUrlAlias, :initPath, :isPseudo
 
     # Construct the necessary database objects
-    def initialize(title, content, path, children)
+    def initialize(title, content, path, children, rightImage)
 		@isPseudo = false
 		@initPath = path
         @title = title
@@ -48,6 +48,9 @@ class Page
 			end
 		end
         @fieldDataBody = FieldDataBody.new(@id, 'page', content)
+        if !rightImage.nil?
+			@fieldDataRightImage = FieldDataRightImage.new(@id, 'page', rightImage['filePath'], rightImage['alt'], rightImage['title'])
+		end
 		urlAliasId = getLastUrlAliasId()
 		@urlAlias = UrlAlias.new(urlAliasId, @id, path)
 		@nodeAccess = NodeAccess.new(@id)
@@ -72,6 +75,7 @@ class Page
         return [@node.to_s,
 				@menuLink.to_s,
 				@fieldDataBody.to_s,
+				@fieldDataRightImage.to_s,
 				@newUrlAlias.to_s,
 				@urlAlias.to_s,
 				@nodeAccess.to_s,

@@ -3,6 +3,7 @@
 require 'highline/import'
 
 $aliasPool = []
+$imgPool = []
 
 def getParent(file, selector, domain)
 	doc = Nokogiri::HTML.parse(File.read(file))
@@ -19,7 +20,7 @@ def buildLinkPool(file, tmpDir, selector, domain)
 	doc.css(selector).each do |a|
 		href = procUrl(a['href'].strip, domain)
 		title = escape_apos(a.content.strip)
-		filePath = fixUrl(href, domain, tmpDir)
+		filePath = tmpDir + fixUrl(href, domain, tmpDir)
 		if !File.file?(filePath) then filePath = '/dev/null' end
 		linkPool.push Link.new(title, href, filePath, [])
 	end
@@ -60,8 +61,17 @@ def transformLinkPool(linkPool, hasParent)
 		if !children.nil? && !children.empty? then puts "" end
 		# Process parent
 		content = ''
-		if File.file?(link.filePath) then content = scrape(link.filePath) end
-		page = Page.new(link.linkText, content, link.relativePath, children)
+		rightImage = nil
+		if File.file?(link.filePath)
+			scraped = scrape(link.filePath)
+			content = scraped['content']
+			rightImage = scraped['rightImage']
+			if !rightImage.nil?
+				imgHash = {'filePath' => rightImage['filePath'], 'fileName' => rightImage['filePath'].split('/').last}
+				$imgPool.push imgHash
+			end
+		end
+		page = Page.new(link.linkText, content, link.relativePath, children, rightImage)
 		newUrlAlias.node = page.id
 		page.newUrlAlias = newUrlAlias
 		if newUrlAlias.linkPath == '!!' then nil else page end
