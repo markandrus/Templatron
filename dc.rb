@@ -28,28 +28,6 @@ htmlDocs = (`find #{tmp + domain} -name index.html`).lines.sort do |a, b|
 	a.split('/').length <=> b.split('/').length
 end
 
-def buildLinkPool(file, tmpDir, selector, domain)
-	linkPool = []
-	doc = Nokogiri::HTML.parse(File.read(file))
-	doc.css(selector).each do |a|
-		href = procUrl(a['href'].strip, domain)
-		title = escape_apos(a.content.strip)
-		filePath = fixUrl(href, domain, tmpDir)
-		if !File.file?(filePath) then filePath = '/dev/null' end
-		linkPool.push Link.new(title, href, filePath, [])
-	end
-	return linkPool.uniq
-end
-
-def getParent(file, selector, domain)
-	doc = Nokogiri::HTML.parse(File.read(file))
-	parent = ''
-	doc.css('ul.sectionhead li a').each do |a|
-		parent += procUrl(a['href'].strip, domain)
-	end
-	return parent
-end
-
 puts "Building tree structure from the following files..."
 links = []
 childPool = htmlDocs.map do |file|
