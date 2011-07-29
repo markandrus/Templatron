@@ -4,7 +4,7 @@
 # NOTE: The last* values I chose are arbitrary, but should be large enough not to collide with
 #		anything in the Drupal database
 $lastNodeId = 100
-$lastMenuLinkId = 600
+$lastMenuLinkId = 700
 $lastUrlAliasId = 100
 def getLastNodeId()
 	$lastNodeId += 1
@@ -26,10 +26,12 @@ class Page
     #     - node
     #     - field_data_body
 	#     - node_access
-    attr_accessor :id, :children, :title, :node, :menuLink, :urlAlias, :fieldDataBody, :nodeAccess, :newUrlAlias
+    attr_accessor :id, :children, :title, :node, :menuLink, :urlAlias, :fieldDataBody, :nodeAccess, :newUrlAlias, :initPath, :isPseudo
 
     # Construct the necessary database objects
     def initialize(title, content, path, children)
+		@isPseudo = false
+		@initPath = path
         @title = title
         @id = getLastNodeId()
         @node = Node.new(@id, 'page', @title)
@@ -52,7 +54,19 @@ class Page
     end
 
     # Returns SQL
+	def pseudo_to_s
+		@menuLink.path = @initPath
+		@menuLink.pathGeneric = '0'
+		@menuLink.code = 'a:1:{s:10:"attributes";a:1:{s:5:"title";s:0:"";}}'
+		@menuLink.isExternal = true
+		# @newUrlAlias.nodePath = @initPath
+		# return @node.to_s + "\n" + @menuLink.to_s + "\n" + @newUrlAlias.to_s + "\n" + nodeAccess.to_s
+		return @menuLink.to_s + "\n"
+	end
+
+    # Returns SQL
     def to_s
+		if @isPseudo then return pseudo_to_s end
 		childrenSql = ''
 		@children.each do |child|
 			childrenSql += child.to_s + "\n"

@@ -21,7 +21,7 @@ end
 
 # Transform the pool of links into our SQL-generating `Page' objects
 def transformLinkPool(linkPool, hasParent)
-	linkPool.map do |link|
+	(linkPool.map do |link|
 		# Prompt for "New" UrlAlias
 		newUrlAlias = newUrlAlias(link.linkText, link.relativePath, hasParent)
 		# Process children first
@@ -35,8 +35,12 @@ def transformLinkPool(linkPool, hasParent)
 		page = Page.new(link.linkText, content, link.relativePath, children)
 		newUrlAlias.node = page.id
 		page.newUrlAlias = newUrlAlias
-		page
-	end
+		if newUrlAlias.linkPath == '!!' then
+			nil
+		else
+			page
+		end
+	end).reject { |n| n.nil? }
 end
 
 def weightParentPages(pages)
@@ -47,9 +51,17 @@ def weightParentPages(pages)
 	end
 end
 
+def correctPseudoPages(pages)
+	pages.each do |page|
+		if page.initPath[0, 6] == 'http:/' || page.initPath[0, 6] == 'https:'
+			page.isPseudo = true
+		end
+	end
+end
+
 def to_sql(linkPool)
-	weightParentPages(transformLinkPool(linkPool, false)).inject(
-		File.read('sql/base.sql')
+	correctPseudoPages(weightParentPages(transformLinkPool(linkPool, false))).inject(
+		File.read('etc/base.sql')
 	) { |sql, page| sql += page.to_s }
 end
 

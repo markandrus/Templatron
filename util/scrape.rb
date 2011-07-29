@@ -12,6 +12,15 @@ def quote_string(v)
 	v.to_s.gsub(/\\/, "\\"+"\\").gsub(/'/, "''").gsub(/\n/, '').gsub(/\t/, "\\t")
 end
 
+def escape_apos(v)
+	if !v.nil?
+		v.to_s.gsub!(/'/, "''")
+	else
+		v = ' '
+	end
+	return v
+end
+
 def transformHeaders(doc)
 	doc.css('h5').each { |h| h.name = 'h6' }
 	doc.css('h4').each { |h| h.name = 'h5' }

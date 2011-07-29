@@ -1,7 +1,6 @@
 #! /usr/local/bin/ruby
 
 require 'rubygems'
-#require 'readline'
 require 'nokogiri'
 require 'class/page.rb'
 require 'class/node.rb'
@@ -47,7 +46,7 @@ found.each_line do |file|
 	doc.css('ul.sectionname li a').each do |a|
 		href = a['href'].strip
 		tailStr = File.directory?(sitePath + href) ? 'index.html' : ''
-		link = Link.new(a.content.strip, procUrl(href, webExpressUrl), sitePath + procUrl(href, webExpressUrl) + tailStr, [])
+		link = Link.new(escape_apos(a.content.strip), procUrl(href, webExpressUrl), sitePath + procUrl(href, webExpressUrl) + tailStr, [])
 		linkPool.push(link)
 	end
 	linkPool.uniq!
@@ -55,14 +54,14 @@ found.each_line do |file|
 	parentLinkText = ''
 	# Parent link
 	doc.css('ul.sectionhead li a').each do |a|
-		parentLinkText += a.content.strip
+		parentLinkText += escape_apos(a.content.strip)
 		parentLinkUrl = procUrl(a['href'].strip, webExpressUrl)
 		childLinkPool = []
 		if parentLinkText != ''
 			# Child links
 			doc.css('ul.sectionhead + ul li a').each do |b|
 				href = b['href'].strip
-				link = Link.new(b.content.strip, procUrl(href, webExpressUrl), sitePath + procUrl(href, webExpressUrl), [])
+				link = Link.new(escape_apos(b.content.strip), procUrl(href, webExpressUrl), sitePath + procUrl(href, webExpressUrl), [])
 				childLinkPool.push(link)
 			end
 			childLinkPool.uniq!
@@ -81,7 +80,6 @@ puts ""
 
 # Process Site Title
 print "Site Title: "
-#siteTitle = Readline.readline
 siteTitle = $stdin.gets
 print "Generating Masthead Image... "
 makeMasthead(siteTitle, 'out/' + webExpressUrl + '/masthead.png')
@@ -96,4 +94,25 @@ puts "\tNOTE: The original URLs will also work on the TemplaTron site.\n\n"
 outputSql = to_sql(linkPool)
 File.open('out/' + webExpressUrl + '/db.sql', 'w') { |f| f.write(outputSql) }
 puts "Output saved to `#{'out/' + webExpressUrl + '/'}'."
+
+# Copying files to server
+puts "\nThis script will now execute the following SFTP commands on `webspace.uchicago.edu'...\n\n"
+puts "\tsftp andrus@webspace.uchicago.edu: << EOF"
+puts "\tcd /hosted/vhosts/sites/sites/#{webExpressUrl}/files"
+puts "\tput etc/favicon.ico"
+puts "\tmkdir template"
+puts "\tcd template"
+puts "\tput etc/background.css"
+puts "\tput #{'out/' + webExpressUrl + '/masthead.png'}"
+puts "\tbye"
+puts "\tEOF\n\n"
+`sftp andrus@webspace.uchicago.edu: << EOF
+cd /hosted/vhosts/sites/sites/#{webExpressUrl}/files
+put etc/favicon.ico
+mkdir template
+cd template
+put etc/background.css
+put #{'out/' + webExpressUrl + '/masthead.png'}
+bye
+EOF`
 
