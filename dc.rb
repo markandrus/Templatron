@@ -14,105 +14,90 @@ require 'util/scrape.rb'
 require 'util/procUrl.rb'
 require 'util/makeMasthead.rb'
 require 'util/transforms.rb'
+require 'util/wget.rb'
+require 'util/sftp.rb'
+require 'util/fixUrl.rb'
 
 # Validate arguments & print usage
-if (ARGV[0].nil? || ARGV[0].strip! == '') then usage(); exit; end
+if ARGV[0].nil? || ARGV[0].strip! == ''
+	usage()
+	exit
+end
+
+domain = ARGV[0]
+tmp = 'tmp/'
+wgetSite(domain, tmp)
+tmpDir = './' + tmp + domain + '/'
+found = `find ./#{tmp + domain} -name index.html`
 
 # Download the entire target Web Express site using `wget'
 webExpressUrl = ARGV[0]
 wgetDir = 'tmp/'
-puts "Downloading `" + webExpressUrl + "'..."
-puts "\twget --quiet --recursive --no-clobber --domains #{webExpressUrl} #{webExpressUrl} -P #{wgetDir} -l 2\n\n"
-`wget --quiet --recursive --no-clobber --domains #{webExpressUrl} #{webExpressUrl} -P #{wgetDir} -l 2`
-puts "Creating output directory..."
-puts "\trm -rf #{'out/' + webExpressUrl + '/'}"
-`rm -rf #{'out/' + webExpressUrl + '/'}`
-puts "\tmkdir #{'out/' + webExpressUrl + '/'}\n\n"
-`mkdir #{'out/' + webExpressUrl + '/'}`
+wgetSite(domain, 'tmp/')
 
 # NOTE: Assumes BSD version of `find'!
 sitePath = './' + wgetDir + webExpressUrl + '/'
-found = `find #{sitePath.sub(/\/$/, '')} -name index.html`
+htmlDocs = (`find #{sitePath.sub(/\/$/, '')} -name index.html`).lines.sort do |a, b|
+	a.split('/').length <=> b.split('/').length
+end
 
-# Build the pool of links according to the target sites navigation lists
-# NOTE: We only need to traverse `index.html' pages
-puts "Building tree structure from the following files..."
-linkPool = []
-found.each_line do |file|
-	file.strip!
-	puts "\t" + file
+def buildLinkPool(file, tmpDir, selector, domain)
+	linkPool = []
 	doc = Nokogiri::HTML.parse(File.read(file))
-	# Record all top-level navigation entries
-	doc.css('ul.sectionname li a').each do |a|
-		href = a['href'].strip
-		tailStr = File.directory?(sitePath + href) ? 'index.html' : ''
-		link = Link.new(escape_apos(a.content.strip), procUrl(href, webExpressUrl), sitePath + procUrl(href, webExpressUrl) + tailStr, [])
-		linkPool.push(link)
+	doc.css(selector).each do |a|
+		href = procUrl(a['href'].strip, domain)
+		title = escape_apos(a.content.strip)
+		# filePath = tmpDir + href + (File.directory?(tmpDir + href) ? 'index.html' : '')
+		puts '>>' + href
+		filePath = fixUrl(href, domain, tmpDir)
+		puts '>>>>' + filePath.to_s
+		if !File.file?(filePath) then filePath = '/dev/null' end
+		linkPool.push Link.new(title, href, filePath, [])
 	end
-	linkPool.uniq!
-	# Record the children (if any) of each navigation entry
-	parentLinkText = ''
-	# Parent link
+	return linkPool.uniq
+end
+
+def getParent(file, selector, domain)
+	doc = Nokogiri::HTML.parse(File.read(file))
+	parent = ''
 	doc.css('ul.sectionhead li a').each do |a|
-		parentLinkText += escape_apos(a.content.strip)
-		parentLinkUrl = procUrl(a['href'].strip, webExpressUrl)
-		childLinkPool = []
-		if parentLinkText != ''
-			# Child links
-			doc.css('ul.sectionhead + ul li a').each do |b|
-				href = b['href'].strip
-				link = Link.new(escape_apos(b.content.strip), procUrl(href, webExpressUrl), sitePath + procUrl(href, webExpressUrl), [])
-				childLinkPool.push(link)
-			end
-			childLinkPool.uniq!
-			# Attach child links to parent link
-			for link in linkPool do
-				if link.linkText === parentLinkText || link.relativePath === parentLinkUrl
-					link.children = childLinkPool
-				end
-			end
-		end
+		parent += procUrl(a['href'].strip, domain)
 	end
-	linkPool.uniq!
+	return parent
+end
+
+puts "Building tree structure from the following files..."
+links = []
+childPool = htmlDocs.map do |file|
+	puts "\t" + file.strip!
+	links = links.empty? ? buildLinkPool(file, tmpDir, 'ul.sectionname li a', domain) : links
+	parent = getParent(file, 'sectionhead li a', domain)
+	{:parent => parent, :children => buildLinkPool(file, tmpDir, 'ul.sectionhead + ul li a', domain)}
+end
+childPool.each do |child|
+	links.select { |link| fixUrl(link.relativePath, domain, tmpDir) == fixUrl(child[:parent], domain, tmpDir) }.each do |parent|
+		parent.children = child[:children]
+	end
 end
 
 puts ""
 
 # Process Site Title
-print "Site Title: "
-siteTitle = $stdin.gets
+siteTitle = ask("Site Title: ")
 print "Generating Masthead Image... "
-makeMasthead(siteTitle, 'out/' + webExpressUrl + '/masthead.png')
-puts "out/" + webExpressUrl + "/masthead.png\n\n"
+makeMasthead(siteTitle, 'out/' + domain + '/masthead.png')
+puts "out/" + domain + "/masthead.png\n\n"
 
 # Print notice before request for new URLs
-puts "Transforming `#{webExpressUrl}'...\n\n"
+puts "Transforming `#{domain}'...\n\n"
 puts "\tPlease provide new URLs for the converted pages."
 puts "\tNOTE: The original URLs will also work on the TemplaTron site.\n\n"
 
 # Transform linkPool, and write SQL to file
-outputSql = to_sql(linkPool)
-File.open('out/' + webExpressUrl + '/db.sql', 'w') { |f| f.write(outputSql) }
-puts "Output saved to `#{'out/' + webExpressUrl + '/'}'."
+outputSql = to_sql(links)
+File.open('out/' + domain + '/db.sql', 'w') { |f| f.write(outputSql) }
+puts "Output saved to `#{'out/' + domain + '/'}'."
 
-# Copying files to server
-puts "\nThis script will now execute the following SFTP commands on `webspace.uchicago.edu'...\n\n"
-puts "\tsftp andrus@webspace.uchicago.edu: << EOF"
-puts "\tcd /hosted/vhosts/sites/sites/#{webExpressUrl}/files"
-puts "\tput etc/favicon.ico"
-puts "\tmkdir template"
-puts "\tcd template"
-puts "\tput etc/background.css"
-puts "\tput #{'out/' + webExpressUrl + '/masthead.png'}"
-puts "\tbye"
-puts "\tEOF\n\n"
-`sftp andrus@webspace.uchicago.edu: << EOF
-cd /hosted/vhosts/sites/sites/#{webExpressUrl}/files
-put etc/favicon.ico
-mkdir template
-cd template
-put etc/background.css
-put #{'out/' + webExpressUrl + '/masthead.png'}
-bye
-EOF`
+# Copy files to server
+sftp('andrus', domain, 'webspace.uchicago.edu')
 
