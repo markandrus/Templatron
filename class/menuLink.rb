@@ -12,26 +12,7 @@ class MenuLink
     end
     # Returns SQL
     def to_s
-        return 'INSERT INTO `menu_links` VALUES (' + ([
-            @menuName.to_s,
-            @id.to_s,
-            @parentId.to_s,
-            @path,			# 'node/' + @node.to_s,
-            @pathGeneric,	# 'node/%',
-            @linkText,
-            @code, # 'a:0:{}',
-            'menu',
-            '0',
-			@isExternal ? '1' : '0',
-            @hasChildren ? '1' : '0',
-            '0',
-            @weight.to_s,
-            @depth.to_s,
-            '1',
-            @parentId == 0 ? @id.to_s : @parentId.to_s,
-            @parentId != 0 ? @id.to_s : '0',
-            '0', '0', '0', '0', '0', '0', '0', '0'
-		].map {|x| "'" + x + "'"}).join(', ') + ');';
+		return buildSql('menu_links', [@menuName, @id, @parentId, @path, @pathGeneric, @linkText, @code, 'menu', 0, @isExternal ? 1 : 0, @hasChildren ? 1 : 0, 0, @weight, @depth, 1, @parentId == 0 ? @id : @parentId, @parentId != 0 ? @id : 0, 0, 0, 0, 0, 0, 0, 0, 0])
     end
 end
 

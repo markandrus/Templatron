@@ -27,7 +27,6 @@ class Page
     #     - field_data_body
 	#     - node_access
     attr_accessor :id, :children, :title, :node, :menuLink, :urlAlias, :fieldDataBody, :fieldDataRightImage, :nodeAccess, :newUrlAlias, :initPath, :isPseudo
-
     # Construct the necessary database objects
     def initialize(title, content, path, children, rightImage)
 		@isPseudo = false
@@ -55,7 +54,6 @@ class Page
 		@urlAlias = UrlAlias.new(urlAliasId, @id, path)
 		@nodeAccess = NodeAccess.new(@id)
     end
-
     # Returns SQL
 	def pseudo_to_s
 		@menuLink.path = @initPath
@@ -64,7 +62,6 @@ class Page
 		@menuLink.isExternal = true
 		return @menuLink.to_s + "\n"
 	end
-
     # Returns SQL
     def to_s
 		if @isPseudo then return pseudo_to_s end

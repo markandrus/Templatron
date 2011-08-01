@@ -15,14 +15,7 @@ class FileManaged
 
 	# Returns SQL
 	def to_s
-		return ('INSERT INTO `file_managed` (fid, filename, uri, filemime, status) VALUES (' + ([
-				@fid.to_s,
-				@filename.gsub(/^\//, ''),
-				@uri,
-				@filemime,
-				'1'
-			]).map {|x| "'" + x + "'"}.join(', ') + ');'
-		);
+		return buildSql('file_managed', {'fid' => @fid, 'filename' => @filename.gsub(/^\//, ''), 'uri' => @uri, 'filemime' => @filemime, 'status' => 1}) + "\n"
 	end
 end
 
@@ -38,32 +31,9 @@ class FieldDataRightImage
 
     # Returns SQL
     def to_s
-		return (@fileManaged.to_s + "\n" +
-			'INSERT INTO `field_data_field_rightimage` VALUES (' + ([
-					'node',
-					@bundle,
-					'0',
-					@id.to_s,
-					@id.to_s,
-					'und',
-					'0',
-					@fid.to_s,
-					@alt,
-					@title
-				].map {|x| "'" + x + "'"}).join(', ') + ');' +
-			"\nINSERT INTO `field_revision_field_rightimage` VALUES (" + ([
-					'node',
-					@bundle,
-					'0',
-					@id.to_s,
-					@id.to_s,
-					'und',
-					'0',
-					@fid.to_s,
-					@alt,
-					@title
-				].map {|x| "'" + x + "'"}).join(', ') + ');'
-		);
+		return @fileManaged.to_s + "\n" +
+			   buildSql('field_data_field_rightimage', ['node', @bundle, 0, @id, @id, 'und', 0, @fid, @alt, @title]) + "\n" +
+			   buildSql('field_revision_field_rightimage', ['node', @bundle, 0, @id, @id, @fid, @alt, @title])
     end
 end
 

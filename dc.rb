@@ -21,6 +21,7 @@ require 'util/makeMasthead.rb'
 # Validate arguments & print usage
 if ARGV[0].nil? || ARGV[0].strip! == '' then usage() & exit end
 
+# Variables
 domain = ARGV[0]
 tmp = 'tmp/'
 wgetSite(domain, tmp)
@@ -31,6 +32,7 @@ tmpDir = './' + tmp + domain + '/'
 findCmd = "find #{tmp + domain} -name index.html"
 htmlDocs = (`#{findCmd}`).lines.sort { |a, b| a.split('/').length <=> b.split('/').length }
 
+# Build Tree Structure
 puts "Building tree structure from the following files..."
 links = []
 htmlDocs.each do |file|
@@ -56,17 +58,17 @@ puts "\tPlease provide new URLs for the converted pages."
 puts "\tNOTE: The original URLs will also work on the TemplaTron site.\n\n"
 
 # Transform linkPool, and write SQL to file
-outputSql = to_sql(links)
-File.open('out/' + domain + '/db.sql', 'w') { |f| f.write(outputSql) }
-puts "\nOutput saved to `#{'out/' + domain + '/'}'."
+File.open('out/' + domain + '/db.sql', 'w') { |f| f.write(to_sql(links)) }
+puts "\nOutput saved to `#{'out/' + domain + '/'}'..."
 
 # These images will be moved to the server
-mkdirCmd = "mkdir ./out/#{domain}/img 1>/dev/null 2>/dev/null"
+mkdirCmd = "mkdir ./out/#{domain}/img"
 `#{mkdirCmd}`
-mkdirCmd = "mkdir ./out/#{domain}/img/resize 1>/dev/null 2>/dev/null"
+mkdirCmd = "mkdir ./out/#{domain}/img/resize"
 `#{mkdirCmd}`
+puts "The following images will be copied to the new site:"
 $imgPool.each do |imgHash|
-	puts imgHash['filePath']
+	puts "\t" + imgHash['filePath']
 	mvCmd = "mv #{tmpDir + imgHash['filePath'].gsub(' ', '\ ')} ./out/#{domain}/img/#{imgHash['fileName'].gsub(' ', '\ ')} 1>/dev/null 2>/dev/null"
 	`#{mvCmd}`
 	convCmd = "convert -resize 218 ./out/#{domain}/img/#{imgHash['fileName'].gsub(' ', '\ ')} ./out/#{domain}/img/resize/#{imgHash['fileName'].gsub(' ', '\ ')} 1>/dev/null 2>/dev/null"

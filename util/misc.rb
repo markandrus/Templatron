@@ -11,17 +11,13 @@ end
 # `wget' an entires site
 def wgetSite(url, dir)
 	puts "Downloading `" + url + "'..."
-
 	wgetCmd = "wget --quiet --recursive --no-clobber --domains #{url} #{url} -P #{dir} -l 2"
 	puts "\t" + wgetCmd + "\n\n"
 	`#{wgetCmd}`
-
 	puts "Creating output directory..."
-
 	rmCmd = "rm -rf #{'out/' + url + '/'}"
 	puts "\t" + rmCmd
 	`#{rmCmd}`
-
 	mkdirCmd = "mkdir #{'out/' + url + '/'}"
 	puts "\t" + mkdirCmd + "\n\n"
 	`#{mkdirCmd}`
@@ -30,7 +26,6 @@ end
 # `sftp' into `webspace.uchicago.edu' and upload the necessary files
 def sftp(user, siteUrl, ftpServ)
 	puts "\nThis script will now execute the following SFTP commands on `#{ftpServ}'...\n\n"
-
 	sftpCmd = ("\tsftp #{user}@#{ftpServ}: << EOF
 	cd /hosted/vhosts/sites/sites/#{siteUrl}/files
 	put etc/favicon.ico
@@ -42,12 +37,14 @@ def sftp(user, siteUrl, ftpServ)
 	mkdir columnwidth
 	cd columnwidth
 	mkdir public
-	cd public\n" + ($imgPool.inject('') { |str, imgHash| str += "\tput out/" + siteUrl + "/img/resize/" + imgHash['fileName'].gsub(' ', '\ ') + "\n" }) +
+	cd public\n" + # ($imgPool.inject('') { |str, imgHash| str += "\tput out/" + siteUrl + "/img/resize/" + imgHash['fileName'].gsub(' ', '\ ') + "\n" }) +
+	"\tput out/#{siteUrl}/img/resize/*\n" +
 	"\tcd ../../
 	mkdir galleryimage
 	cd galleryimage
 	mkdir public
-	cd public\n" + ($imgPool.inject('') { |str, imgHash| str += "\tput out/" + siteUrl + "/img/" + imgHash['fileName'].gsub(' ', '\ ') + "\n" }) +
+	cd public\n" + # ($imgPool.inject('') { |str, imgHash| str += "\tput out/" + siteUrl + "/img/" + imgHash['fileName'].gsub(' ', '\ ') + "\n" }) +
+	"\tput out/#{siteUrl}/img/*\n" +
 	"\tbye
 	EOF")
 
@@ -76,5 +73,15 @@ def procUrl(raw, domain)
 		raw = '/'
 	end
 	return raw
+end
+
+def buildSql(tableName, values)
+	sql = "INSERT INTO `#{tableName}` "
+	if values.class == Hash
+		sql += '(' + values.keys.join(", ") + ') VALUES '
+		values = values.values
+	end
+	sql += '(' + (values.map { |value| "'" + value.to_s + "'" }).join(", ") + ');'
+	return sql
 end
 
