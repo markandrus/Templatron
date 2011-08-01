@@ -20,15 +20,7 @@ def getLastUrlAliasId()
 end
 
 class Page
-    # A WebExpress Page maps to a number of different Drupal tables:
-    #     - url_alias
-    #     - menu_links
-    #     - node
-    #     - field_data_body
-	#     - node_access
     attr_accessor :id, :children, :title, :node, :menuLink, :urlAlias, :fieldDataBody, :fieldDataRightImage, :nodeAccess, :newUrlAlias, :initPath, :isPseudo
-
-    # Construct the necessary database objects
     def initialize(title, content, path, children, rightImage)
 		@isPseudo = false
 		@initPath = path
@@ -38,9 +30,8 @@ class Page
         menuLinkId = getLastMenuLinkId()
 		@children = children
         @menuLink = MenuLink.new(menuLinkId, 0, @title, @id, !@children.empty?, 0, 1)
-		i = 0;
 		if !@children.nil? && !@children.empty? then
-			@children.each do |child|
+			@children.inject(0) do |i, child|
 				child.menuLink.parentId = menuLinkId
 				child.menuLink.depth += 1
 				child.menuLink.weight = -50 + i
@@ -55,8 +46,6 @@ class Page
 		@urlAlias = UrlAlias.new(urlAliasId, @id, path)
 		@nodeAccess = NodeAccess.new(@id)
     end
-
-    # Returns SQL
 	def pseudo_to_s
 		@menuLink.path = @initPath
 		@menuLink.pathGeneric = '0'
@@ -64,8 +53,6 @@ class Page
 		@menuLink.isExternal = true
 		return @menuLink.to_s + "\n"
 	end
-
-    # Returns SQL
     def to_s
 		if @isPseudo then return pseudo_to_s end
 		childrenSql = ''

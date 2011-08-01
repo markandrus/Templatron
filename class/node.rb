@@ -3,24 +3,14 @@
 class Node
     attr_accessor :id, :type, :title
     def initialize(id, type, title)
-        @id = id; @type = type; @title = title
+        @id = id
+		@type = type
+		@title = title
     end
     # Returns SQL
     def to_s
-		return (
-			'INSERT INTO `node` (nid, vid, title, type) VALUES (' + ([
-					@id.to_s,
-					@id.to_s,
-					@title,
-					@type
-				].map {|x| "'" + x + "'"}).join(', ') + ");\n" +
-			'INSERT INTO `node_revision` (nid, vid, title, log) VALUES (' + ([
-					@id.to_s,
-					@id.to_s,
-					@title,
-					''
-				].map {|x| "'" + x + "'"}).join(', ') + ');'
-		);
+		return buildSql('node', {'nid' => @id, 'vid' => @id, 'title' => @title, 'type' => @type}) + "\n" +
+			   buildSql('node_revision', {'nid' => @id, 'vid' => @id, 'title' => @title, 'log' => ''})
     end
 end
 

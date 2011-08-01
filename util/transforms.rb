@@ -91,8 +91,8 @@ def transformLinkPool(linkPool, hasParent, parentPath)
 end
 
 def weightParentPages(pages)
-	i = 0
-	pages.each { |page| page.menuLink.weight = -50 + i; i += 1 }
+	pages.inject(0) { |i, page| page.menuLink.weight = -50 + i; i += 1 }
+	return pages
 end
 
 def correctPseudoPages(pages)
