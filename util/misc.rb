@@ -37,17 +37,16 @@ def sftp(user, siteUrl, ftpServ)
 	mkdir columnwidth
 	cd columnwidth
 	mkdir public
-	cd public\n" + # ($imgPool.inject('') { |str, imgHash| str += "\tput out/" + siteUrl + "/img/resize/" + imgHash['fileName'].gsub(' ', '\ ') + "\n" }) +
-	"\tput out/#{siteUrl}/img/resize/*\n" +
-	"\tcd ../../
+	cd public
+	put out/#{siteUrl}/img/resize/*
+	tcd ../../
 	mkdir galleryimage
 	cd galleryimage
 	mkdir public
-	cd public\n" + # ($imgPool.inject('') { |str, imgHash| str += "\tput out/" + siteUrl + "/img/" + imgHash['fileName'].gsub(' ', '\ ') + "\n" }) +
-	"\tput out/#{siteUrl}/img/*\n" +
-	"\tbye
+	cd public
+	tput out/#{siteUrl}/img/*
+	bye
 	EOF")
-
 	puts sftpCmd + "\n\n"
 	puts "\n"
 	`#{sftpCmd}`

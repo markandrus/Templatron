@@ -4,7 +4,13 @@ class MenuLink
     attr_accessor :id, :parentId, :linkText, :node, :hasChildren, :weight, :depth, :menuName, :path, :pathGeneric, :code, :isExternal
     def initialize(id, parentId, linkText, node, hasChildren, weight, depth)
         @menuName = 'main-menu'
-        @id = id; @parentId = parentId; @linkText = linkText; @node = node; @hasChildren = hasChildren; @weight = weight; @depth = depth;
+        @id = id
+		@parentId = parentId
+		@linkText = linkText
+		@node = node
+		@hasChildren = hasChildren
+		@weight = weight
+		@depth = depth
 		@path = 'node/' + @node.to_s
 		@pathGeneric = 'node/%'
 		@code = 'a:0:{}'

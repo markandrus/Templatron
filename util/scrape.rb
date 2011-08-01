@@ -39,36 +39,21 @@ def deleteComments(doc)
 end
 
 # Collect HTML from `div#content div#bottomrow div#col1' or `div#content',
-# Exclude `div.imgrt'
 # Transform h5 to h6, h4 to h5, h3 to h4, etc.
 def scrape(filePath)
 	# Clean up the file
 	doc = Nokogiri::HTML.parse(File.read(filePath))
+	# Get rightImage
 	rightImage = nil
-	doc.css('div.imgrt img').each do |img|
-		rightImage = Hash.new
-		rightImage['filePath'] = img['src'].strip
-		rightImage['alt'] = escape_apos(img['alt'].strip)
-		rightImage['title'] = ' '
-		#puts "Got Image:\t" + rightImage['filePath']
-		#puts "      Alt:\t" + rightImage['alt']
-		#puts "    Title:\t" + rightImage['title']
-		#puts ""
-		#puts ""
-	end
-	deleteComments(doc)
+	doc.css('div.imgrt img').each { |img| rightImage = {'filePath' => img['src'].strip, 'alt' => escape_apos(img['alt'].strip), 'title' => ' '} }
+	# Clean up the rest of the document
 	deleteMisc(doc)
+	deleteComments(doc)
 	transformHeaders(doc)
-	# Aggregate content
+	# Get content
 	content = ''
-	doc.css('div#content div#bottomrow div#col1').each do |div|
-		content += div.inner_html
-	end
-	doc.css('div#content').each do |div|
-		if content == ''
-			content += div.inner_html
-		end
-	end
+	doc.css('div#content div#bottomrow div#col1').each { |div| content += div.inner_html }
+	doc.css('div#content').each { |div| content += content.empty? ? div.inner_html : '' }
 	# Prepare for SQL
 	return {'content' => quote_string(unicode_to_html(content)), 'rightImage' => rightImage}
 end

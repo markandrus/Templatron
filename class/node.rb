@@ -3,7 +3,9 @@
 class Node
     attr_accessor :id, :type, :title
     def initialize(id, type, title)
-        @id = id; @type = type; @title = title
+        @id = id
+		@type = type
+		@title = title
     end
     # Returns SQL
     def to_s
