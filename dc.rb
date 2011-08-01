@@ -25,33 +25,30 @@ domain = ARGV[0]
 tmp = 'tmp/'
 wgetSite(domain, tmp)
 tmpDir = './' + tmp + domain + '/'
+
+# Find all `index.html' files and sort by depth
 # NOTE: Assumes BSD version of `find'
-htmlDocs = (`find #{tmp + domain} -name index.html`).lines.sort do |a, b|
-	a.split('/').length <=> b.split('/').length
-end
+findCmd = "find #{tmp + domain} -name index.html"
+htmlDocs = (`#{findCmd}`).lines.sort { |a, b| a.split('/').length <=> b.split('/').length }
 
 puts "Building tree structure from the following files..."
 links = []
-childPool = htmlDocs.map do |file|
+htmlDocs.each do |file|
 	puts "\t" + file.strip!
+	# Build (parent) link pool from the first `file', AKA `/index.hmtl'
 	links = links.empty? ? buildLinkPool(file, tmpDir, 'ul.sectionname li a', domain) : links
+	# If this is a child page, determine the parent and build any child links
 	parent = getParent(file, 'sectionhead li a', domain)
-	{:parent => parent, :children => buildLinkPool(file, tmpDir, 'ul.sectionhead + ul li a', domain)}
-end
-childPool.each do |child|
-	links.select { |link| fixUrl(link.relativePath, domain, tmpDir) == fixUrl(child[:parent], domain, tmpDir) }.each do |parent|
-		parent.children = child[:children]
-	end
+	children = buildLinkPool(file, tmpDir, 'ul.sectionhead + ul li a', domain)
+	# Connect the children to their respective parent; `links.select' should return only 1 result
+	links.select { |link| fixUrl(link.relativePath, domain, tmpDir) == fixUrl(parent, domain, tmpDir) }.each { |parent| parent.children = children }
 end
 
 # Process Site Title
-siteTitle = ask("\nSite Title: ") { |q| q.validate = /[a-z]+/ }
+siteTitle = ask("\nSite Title: ") { |q| q.validate = /.+/ }
 print "Generating Masthead Image... "
-if makeMasthead(siteTitle, 'out/' + domain + '/masthead.png')
-	puts "`out/" + domain + "/masthead.png'\n\n"
-else
-	puts "FAIL"
-end
+mastheadPath = 'out/' + domain + '/masthead.png'
+puts makeMasthead(siteTitle, mastheadPath) ? '`' + mastheadPath + "'\n\n" : "FAIL"
 
 # Print notice before request for new URLs
 puts "Transforming `#{domain}'...\n\n"
