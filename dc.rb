@@ -45,10 +45,13 @@ childPool.each do |child|
 end
 
 # Process Site Title
-siteTitle = ask("\nSite Title: ")
+siteTitle = ask("\nSite Title: ") { |q| q.validate = /[a-z]+/ }
 print "Generating Masthead Image... "
-makeMasthead(siteTitle, 'out/' + domain + '/masthead.png')
-puts "out/" + domain + "/masthead.png\n\n"
+if makeMasthead(siteTitle, 'out/' + domain + '/masthead.png')
+	puts "`out/" + domain + "/masthead.png'\n\n"
+else
+	puts "FAIL"
+end
 
 # Print notice before request for new URLs
 puts "Transforming `#{domain}'...\n\n"
