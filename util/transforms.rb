@@ -92,6 +92,7 @@ end
 
 def weightParentPages(pages)
 	pages.inject(0) { |i, page| page.menuLink.weight = -50 + i; i += 1 }
+	return pages
 end
 
 def correctPseudoPages(pages)
