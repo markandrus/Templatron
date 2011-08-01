@@ -76,10 +76,10 @@ class Page
 				@menuLink.to_s,
 				@fieldDataBody.to_s,
 				@fieldDataRightImage.to_s,
-				@newUrlAlias.to_s,
 				@urlAlias.to_s,
+				@newUrlAlias.to_s,
 				@nodeAccess.to_s,
-				@childrenSql].join("\n")
+				childrenSql].join("\n")
     end
 end
 
