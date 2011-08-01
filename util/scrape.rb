@@ -2,7 +2,6 @@
 
 require 'rubygems'
 require 'nokogiri'
-require 'mysql'
 
 def unicode_to_html(str)
 	str.unpack("U*").collect {|s| (s > 127 ? "&##{s};" : s.chr) }.join("")
@@ -45,6 +44,18 @@ end
 def scrape(filePath)
 	# Clean up the file
 	doc = Nokogiri::HTML.parse(File.read(filePath))
+	rightImage = nil
+	doc.css('div.imgrt img').each do |img|
+		rightImage = Hash.new
+		rightImage['filePath'] = img['src'].strip
+		rightImage['alt'] = escape_apos(img['alt'].strip)
+		rightImage['title'] = ' '
+		#puts "Got Image:\t" + rightImage['filePath']
+		#puts "      Alt:\t" + rightImage['alt']
+		#puts "    Title:\t" + rightImage['title']
+		#puts ""
+		#puts ""
+	end
 	deleteComments(doc)
 	deleteMisc(doc)
 	transformHeaders(doc)
@@ -59,6 +70,6 @@ def scrape(filePath)
 		end
 	end
 	# Prepare for SQL
-	return quote_string(unicode_to_html(content))
+	return {'content' => quote_string(unicode_to_html(content)), 'rightImage' => rightImage}
 end
 

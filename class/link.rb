@@ -6,10 +6,10 @@ class Link
 		@linkText = linkText; @relativePath = relativePath; @filePath = filePath; @children = children
 	end
 	def hash
-		@relativePath.intern.hash
+		@relativePath.sub(/\/$/, '/index.html').intern.hash
 	end
 	def eql?(other)
-		@relativePath === other.relativePath
+		@relativePath.sub(/\/$/, '/index.html') == other.relativePath.sub(/\/$/, '/index.html')
 	end
 end
 

@@ -7,17 +7,20 @@ class Node
     end
     # Returns SQL
     def to_s
-		return ('INSERT INTO `node` (nid, vid, title, type) VALUES (' + ([
-			@id.to_s,
-			@id.to_s,
-			@title,
-			@type
-		].map {|x| "'" + x + "'"}).join(', ') + ");\n" + 'INSERT INTO `node_revision` (nid, vid, title, log) VALUES (' + ([
-			@id.to_s,
-			@id.to_s,
-			@title,
-			''
-		].map {|x| "'" + x + "'"}).join(', ') + ');');
+		return (
+			'INSERT INTO `node` (nid, vid, title, type) VALUES (' + ([
+					@id.to_s,
+					@id.to_s,
+					@title,
+					@type
+				].map {|x| "'" + x + "'"}).join(', ') + ");\n" +
+			'INSERT INTO `node_revision` (nid, vid, title, log) VALUES (' + ([
+					@id.to_s,
+					@id.to_s,
+					@title,
+					''
+				].map {|x| "'" + x + "'"}).join(', ') + ');'
+		);
     end
 end
 

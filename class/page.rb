@@ -26,10 +26,10 @@ class Page
     #     - node
     #     - field_data_body
 	#     - node_access
-    attr_accessor :id, :children, :title, :node, :menuLink, :urlAlias, :fieldDataBody, :nodeAccess, :newUrlAlias, :initPath, :isPseudo
+    attr_accessor :id, :children, :title, :node, :menuLink, :urlAlias, :fieldDataBody, :fieldDataRightImage, :nodeAccess, :newUrlAlias, :initPath, :isPseudo
 
     # Construct the necessary database objects
-    def initialize(title, content, path, children)
+    def initialize(title, content, path, children, rightImage)
 		@isPseudo = false
 		@initPath = path
         @title = title
@@ -48,6 +48,9 @@ class Page
 			end
 		end
         @fieldDataBody = FieldDataBody.new(@id, 'page', content)
+        if !rightImage.nil?
+			@fieldDataRightImage = FieldDataRightImage.new(@id, 'page', rightImage['filePath'], rightImage['alt'], rightImage['title'])
+		end
 		urlAliasId = getLastUrlAliasId()
 		@urlAlias = UrlAlias.new(urlAliasId, @id, path)
 		@nodeAccess = NodeAccess.new(@id)
@@ -59,8 +62,6 @@ class Page
 		@menuLink.pathGeneric = '0'
 		@menuLink.code = 'a:1:{s:10:"attributes";a:1:{s:5:"title";s:0:"";}}'
 		@menuLink.isExternal = true
-		# @newUrlAlias.nodePath = @initPath
-		# return @node.to_s + "\n" + @menuLink.to_s + "\n" + @newUrlAlias.to_s + "\n" + nodeAccess.to_s
 		return @menuLink.to_s + "\n"
 	end
 
@@ -71,7 +72,14 @@ class Page
 		@children.each do |child|
 			childrenSql += child.to_s + "\n"
 		end
-        return node.to_s + "\n" + menuLink.to_s + "\n" + fieldDataBody.to_s + "\n" + newUrlAlias.to_s + "\n" + urlAlias.to_s + "\n" + nodeAccess.to_s + "\n" + childrenSql + "\n"
+        return [@node.to_s,
+				@menuLink.to_s,
+				@fieldDataBody.to_s,
+				@fieldDataRightImage.to_s,
+				@urlAlias.to_s,
+				@newUrlAlias.to_s,
+				@nodeAccess.to_s,
+				childrenSql].join("\n")
     end
 end
 

@@ -16,8 +16,8 @@ class MenuLink
             @menuName.to_s,
             @id.to_s,
             @parentId.to_s,
-            @path, # 'node/' + @node.to_s,
-            @pathGeneric, # 'node/%',
+            @path,			# 'node/' + @node.to_s,
+            @pathGeneric,	# 'node/%',
             @linkText,
             @code, # 'a:0:{}',
             'menu',
@@ -31,7 +31,7 @@ class MenuLink
             @parentId == 0 ? @id.to_s : @parentId.to_s,
             @parentId != 0 ? @id.to_s : '0',
             '0', '0', '0', '0', '0', '0', '0', '0'
-        ].map {|x| "'" + x + "'"}).join(', ') + ');';
+		].map {|x| "'" + x + "'"}).join(', ') + ');';
     end
 end
 
