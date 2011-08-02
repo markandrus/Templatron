@@ -33,7 +33,7 @@ class FieldDataRightImage
     def to_s
 		return @fileManaged.to_s + "\n" +
 			   buildSql('field_data_field_rightimage', ['node', @bundle, 0, @id, @id, 'und', 0, @fid, @alt, @title]) + "\n" +
-			   buildSql('field_revision_field_rightimage', ['node', @bundle, 0, @id, @id, @fid, @alt, @title])
+			   buildSql('field_revision_field_rightimage', ['node', @bundle, 0, @id, @id, 'und', 0, @fid, @alt, @title])
     end
 end
 

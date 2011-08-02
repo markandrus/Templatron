@@ -69,6 +69,7 @@ mkdirCmd = "mkdir ./out/#{domain}/img/resize"
 `#{mkdirCmd}`
 puts "The following images will be copied to the new site:"
 $imgPool.each do |imgHash|
+	imgHash['filePath'] = imgHash['filePath'].sub(/^https?:\/\/#{domain}\//, '')
 	puts "\t" + imgHash['filePath']
 	mvCmd = "mv #{tmpDir + imgHash['filePath'].gsub(' ', '\ ')} ./out/#{domain}/img/#{imgHash['fileName'].gsub(' ', '\ ')} 1>/dev/null 2>/dev/null"
 	`#{mvCmd}`

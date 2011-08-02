@@ -39,12 +39,12 @@ def sftp(user, siteUrl, ftpServ)
 	mkdir public
 	cd public
 	put out/#{siteUrl}/img/resize/*
-	tcd ../../
+	cd ../../
 	mkdir galleryimage
 	cd galleryimage
 	mkdir public
 	cd public
-	tput out/#{siteUrl}/img/*
+	put out/#{siteUrl}/img/*
 	bye
 	EOF")
 	puts sftpCmd + "\n\n"
@@ -79,6 +79,8 @@ def buildSql(tableName, values)
 	if values.class == Hash
 		sql += '(' + values.keys.join(", ") + ') VALUES '
 		values = values.values
+	else
+		sql += 'VALUES '
 	end
 	sql += '(' + (values.map { |value| "'" + value.to_s + "'" }).join(", ") + ');'
 	return sql
