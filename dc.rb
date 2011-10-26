@@ -1,4 +1,4 @@
-#! ruby
+#! /usr/bin/env ruby
 # by Mark
 
 require 'rubygems'
