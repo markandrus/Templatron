@@ -4,20 +4,10 @@
 require 'rubygems'
 require 'nokogiri'
 require 'highline/import'
+require 'require_all'
 
-require 'class/page.rb'
-require 'class/node.rb'
-require 'class/menuLink.rb'
-require 'class/fieldDataBody.rb'
-require 'class/fieldDataRightImage.rb'
-require 'class/urlAlias.rb'
-require 'class/nodeAccess.rb'
-require 'class/link.rb'
-
-require 'util/misc.rb'
-require 'util/scrape.rb'
-require 'util/transforms.rb'
-require 'util/makeMasthead.rb'
+require_all 'class'
+require_all 'util'
 
 # Validate arguments & print usage
 if ARGV[0].nil? || ARGV[0].strip! == '' then usage() & exit end
