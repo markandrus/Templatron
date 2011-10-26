@@ -10,10 +10,10 @@ require_all 'class'
 require_all 'util'
 
 # Validate arguments & print usage
-if ARGV[0].nil? || ARGV[0].strip! == '' then usage() & exit end
+if ARGV[0].nil? || ARGV[0].strip == '' then usage() & exit end
 
 # Variables
-domain = ARGV[0]
+domain = ARGV[0].strip
 tmp = 'tmp/'
 wgetSite(domain, tmp)
 tmpDir = './' + tmp + domain + '/'
