@@ -4,7 +4,7 @@
 # NOTE: The last* values I chose are arbitrary, but should be large enough not to collide with
 #		anything in the Drupal database
 $lastNodeId = 100
-$lastMenuLinkId = 700
+$lastMenuLinkId = 800
 $lastUrlAliasId = 100
 def getLastNodeId()
 	$lastNodeId += 1
@@ -63,8 +63,8 @@ class Page
 				@menuLink.to_s,
 				@fieldDataBody.to_s,
 				@fieldDataRightImage.to_s,
-				@urlAlias.to_s,
 				@newUrlAlias.to_s,
+				@urlAlias.to_s,
 				@nodeAccess.to_s,
 				childrenSql].join("\n")
     end

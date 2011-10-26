@@ -11,7 +11,7 @@ end
 # `wget' an entires site
 def wgetSite(url, dir)
 	puts "Downloading `" + url + "'..."
-	wgetCmd = "wget --quiet --recursive --no-clobber --domains #{url} #{url} -P #{dir} -l 2"
+	wgetCmd = "wget --quiet --recursive --no-clobber --domains --keep-session-cookies #{url} #{url} -P #{dir} -l 2"
 	puts "\t" + wgetCmd + "\n\n"
 	`#{wgetCmd}`
 	puts "Creating output directory..."

@@ -35,7 +35,7 @@ def newUrlAlias(linkText, linkPath, hasParent)
 	puts tab + "URL:      " + linkPath
 	if linkPath != '/' && (linkPath.length < 6 || (linkPath[0, 6] != 'http:/' && linkPath[0, 6] != 'https:')) then
 		newLink = String.new(linkPath).split('/')
-		if !newLink.nil? && !newLink.last.nil? then newLink = newLink.last.gsub(/\.s?html/, '') else newLink = '' end
+		if !newLink.nil? && !newLink.last.nil? then newLink = newLink.last.gsub(/\.s?html/, '').gsub(/ /, '-').gsub('_', '-') else newLink = '' end
 		url = nil
 		while !$aliasPool.index(url).nil? || url.nil?
 			if !url.nil?
@@ -85,6 +85,10 @@ def transformLinkPool(linkPool, hasParent, parentPath)
 		end
 		page = Page.new(link.linkText, content, link.relativePath, children, rightImage)
 		newUrlAlias.node = page.id
+		tid = page.urlAlias.id
+		page.urlAlias.id = newUrlAlias.id
+		newUrlAlias.id = tid
+		newUrlAlias.nodePath = 'node/' + page.id.to_s
 		page.newUrlAlias = newUrlAlias
 		if newUrlAlias.linkPath == '!!' then nil else page end
 	end).reject { |n| n.nil? }

@@ -10,6 +10,7 @@ class FileManaged
 	attr_accessor :fid, :filename, :uri, :filemime
 	def initialize(fid, filename, uri)
 		@fid = fid; @filename = filename; @uri = uri
+		@uri = filename
 		@filemime = 'image/' + @filename.match(/[a-z]*$/).to_s.sub(/jpg$/, 'jpeg')
 	end
 	def to_s

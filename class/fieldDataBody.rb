@@ -8,8 +8,8 @@ class FieldDataBody
 		@bodyValue = bodyValue
     end
     def to_s
-		return buildSql('field_data_body', ['node', @bundle, 0, @id, @id, 'und', 0, @bodyValue, '', 'filtered_html']) + "\n" +
-			   buildSql('field_revision_body', ['node', @bundle, 0, @id, @id, 'und', 0, @bodyValue, '', 'filtered_html'])
+		return buildSql('field_data_body', ['node', @bundle, 0, @id, @id, 'und', 0, @bodyValue, '', 'full_html']) + "\n" +
+			   buildSql('field_revision_body', ['node', @bundle, 0, @id, @id, 'und', 0, @bodyValue, '', 'full_html'])
     end
 end
 
