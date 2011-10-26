@@ -1,4 +1,4 @@
-#! /usr/local/bin/ruby
+#! ruby
 # by Mark
 
 require 'rubygems'
