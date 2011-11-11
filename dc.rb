@@ -1,5 +1,5 @@
 #! /usr/bin/env ruby
-# by Mark
+# For help: andrus@uchicago.edu
 
 require 'rubygems'
 require 'nokogiri'
@@ -11,6 +11,13 @@ require_all 'util'
 
 # Validate arguments & print usage
 if ARGV[0].nil? || ARGV[0].strip == '' then usage() & exit end
+
+# Update `etc/base.sql'
+upCmd = 'wget -q http://itservices.uchicago.edu/webservices/internal/templatron_scripts/base.mysql -O etc/base.sql'
+print "Updating `etc/base.sql'...\n"
+puts "\t" + upCmd
+`#{upCmd}`
+puts "\n\n"
 
 # Variables
 domain = ARGV[0].strip
